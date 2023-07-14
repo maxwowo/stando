@@ -43,22 +43,16 @@ struct StandoApp: App {
             }
             
             Divider()
-            
-            Button(action: {
+
+            Button("Preferences") {
                 print("Preferences tapped")
-            }) {
-                HStack {
-                    Spacer()
-                    Text("Preferences")
-                    Spacer()
-                }
             }
             
             Divider()
             
             Button("Quit") {
                 NSApplication.shared.terminate(nil)
-            }.padding(20)
+            }
         }
         
     }
