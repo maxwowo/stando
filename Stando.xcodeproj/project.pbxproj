@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14DE798E2A61031E0090E61D /* StandoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE798D2A61031E0090E61D /* StandoApp.swift */; };
+		14DE79902A61031E0090E61D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE798F2A61031E0090E61D /* ContentView.swift */; };
+		14DE79922A61031F0090E61D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14DE79912A61031F0090E61D /* Assets.xcassets */; };
+		14DE79952A61031F0090E61D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14DE79942A61031F0090E61D /* Preview Assets.xcassets */; };
+		14DE79A02A61031F0090E61D /* StandoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE799F2A61031F0090E61D /* StandoTests.swift */; };
+		14DE79AA2A61031F0090E61D /* StandoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE79A92A61031F0090E61D /* StandoUITests.swift */; };
+		14DE79AC2A61031F0090E61D /* StandoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE79AB2A61031F0090E61D /* StandoUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14DE799C2A61031F0090E61D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14DE79822A61031E0090E61D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14DE79892A61031E0090E61D;
+			remoteInfo = Stando;
+		};
+		14DE79A62A61031F0090E61D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14DE79822A61031E0090E61D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14DE79892A61031E0090E61D;
+			remoteInfo = Stando;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14DE798A2A61031E0090E61D /* Stando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stando.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14DE798D2A61031E0090E61D /* StandoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandoApp.swift; sourceTree = "<group>"; };
+		14DE798F2A61031E0090E61D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		14DE79912A61031F0090E61D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14DE79942A61031F0090E61D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		14DE79962A61031F0090E61D /* Stando.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Stando.entitlements; sourceTree = "<group>"; };
+		14DE799B2A61031F0090E61D /* StandoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StandoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14DE799F2A61031F0090E61D /* StandoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandoTests.swift; sourceTree = "<group>"; };
+		14DE79A52A61031F0090E61D /* StandoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StandoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14DE79A92A61031F0090E61D /* StandoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandoUITests.swift; sourceTree = "<group>"; };
+		14DE79AB2A61031F0090E61D /* StandoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14DE79872A61031E0090E61D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14DE79982A61031F0090E61D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14DE79A22A61031F0090E61D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14DE79812A61031E0090E61D = {
+			isa = PBXGroup;
+			children = (
+				14DE798C2A61031E0090E61D /* Stando */,
+				14DE799E2A61031F0090E61D /* StandoTests */,
+				14DE79A82A61031F0090E61D /* StandoUITests */,
+				14DE798B2A61031E0090E61D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		14DE798B2A61031E0090E61D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14DE798A2A61031E0090E61D /* Stando.app */,
+				14DE799B2A61031F0090E61D /* StandoTests.xctest */,
+				14DE79A52A61031F0090E61D /* StandoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14DE798C2A61031E0090E61D /* Stando */ = {
+			isa = PBXGroup;
+			children = (
+				14DE798D2A61031E0090E61D /* StandoApp.swift */,
+				14DE798F2A61031E0090E61D /* ContentView.swift */,
+				14DE79912A61031F0090E61D /* Assets.xcassets */,
+				14DE79962A61031F0090E61D /* Stando.entitlements */,
+				14DE79932A61031F0090E61D /* Preview Content */,
+			);
+			path = Stando;
+			sourceTree = "<group>";
+		};
+		14DE79932A61031F0090E61D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				14DE79942A61031F0090E61D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		14DE799E2A61031F0090E61D /* StandoTests */ = {
+			isa = PBXGroup;
+			children = (
+				14DE799F2A61031F0090E61D /* StandoTests.swift */,
+			);
+			path = StandoTests;
+			sourceTree = "<group>";
+		};
+		14DE79A82A61031F0090E61D /* StandoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				14DE79A92A61031F0090E61D /* StandoUITests.swift */,
+				14DE79AB2A61031F0090E61D /* StandoUITestsLaunchTests.swift */,
+			);
+			path = StandoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14DE79892A61031E0090E61D /* Stando */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14DE79AF2A61031F0090E61D /* Build configuration list for PBXNativeTarget "Stando" */;
+			buildPhases = (
+				14DE79862A61031E0090E61D /* Sources */,
+				14DE79872A61031E0090E61D /* Frameworks */,
+				14DE79882A61031E0090E61D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Stando;
+			productName = Stando;
+			productReference = 14DE798A2A61031E0090E61D /* Stando.app */;
+			productType = "com.apple.product-type.application";
+		};
+		14DE799A2A61031F0090E61D /* StandoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14DE79B22A61031F0090E61D /* Build configuration list for PBXNativeTarget "StandoTests" */;
+			buildPhases = (
+				14DE79972A61031F0090E61D /* Sources */,
+				14DE79982A61031F0090E61D /* Frameworks */,
+				14DE79992A61031F0090E61D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14DE799D2A61031F0090E61D /* PBXTargetDependency */,
+			);
+			name = StandoTests;
+			productName = StandoTests;
+			productReference = 14DE799B2A61031F0090E61D /* StandoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		14DE79A42A61031F0090E61D /* StandoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14DE79B52A61031F0090E61D /* Build configuration list for PBXNativeTarget "StandoUITests" */;
+			buildPhases = (
+				14DE79A12A61031F0090E61D /* Sources */,
+				14DE79A22A61031F0090E61D /* Frameworks */,
+				14DE79A32A61031F0090E61D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14DE79A72A61031F0090E61D /* PBXTargetDependency */,
+			);
+			name = StandoUITests;
+			productName = StandoUITests;
+			productReference = 14DE79A52A61031F0090E61D /* StandoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14DE79822A61031E0090E61D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					14DE79892A61031E0090E61D = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					14DE799A2A61031F0090E61D = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 14DE79892A61031E0090E61D;
+					};
+					14DE79A42A61031F0090E61D = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 14DE79892A61031E0090E61D;
+					};
+				};
+			};
+			buildConfigurationList = 14DE79852A61031E0090E61D /* Build configuration list for PBXProject "Stando" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14DE79812A61031E0090E61D;
+			productRefGroup = 14DE798B2A61031E0090E61D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14DE79892A61031E0090E61D /* Stando */,
+				14DE799A2A61031F0090E61D /* StandoTests */,
+				14DE79A42A61031F0090E61D /* StandoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14DE79882A61031E0090E61D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14DE79952A61031F0090E61D /* Preview Assets.xcassets in Resources */,
+				14DE79922A61031F0090E61D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14DE79992A61031F0090E61D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14DE79A32A61031F0090E61D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14DE79862A61031E0090E61D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14DE79902A61031E0090E61D /* ContentView.swift in Sources */,
+				14DE798E2A61031E0090E61D /* StandoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14DE79972A61031F0090E61D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14DE79A02A61031F0090E61D /* StandoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14DE79A12A61031F0090E61D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14DE79AA2A61031F0090E61D /* StandoUITests.swift in Sources */,
+				14DE79AC2A61031F0090E61D /* StandoUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14DE799D2A61031F0090E61D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14DE79892A61031E0090E61D /* Stando */;
+			targetProxy = 14DE799C2A61031F0090E61D /* PBXContainerItemProxy */;
+		};
+		14DE79A72A61031F0090E61D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14DE79892A61031E0090E61D /* Stando */;
+			targetProxy = 14DE79A62A61031F0090E61D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		14DE79AD2A61031F0090E61D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		14DE79AE2A61031F0090E61D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		14DE79B02A61031F0090E61D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Stando/Stando.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Stando/Preview Content\"";
+				DEVELOPMENT_TEAM = 5C93L24A22;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxwowo.Stando;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		14DE79B12A61031F0090E61D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Stando/Stando.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Stando/Preview Content\"";
+				DEVELOPMENT_TEAM = 5C93L24A22;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxwowo.Stando;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		14DE79B32A61031F0090E61D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5C93L24A22;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxwowo.StandoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stando.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Stando";
+			};
+			name = Debug;
+		};
+		14DE79B42A61031F0090E61D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5C93L24A22;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxwowo.StandoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stando.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Stando";
+			};
+			name = Release;
+		};
+		14DE79B62A61031F0090E61D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5C93L24A22;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxwowo.StandoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Stando;
+			};
+			name = Debug;
+		};
+		14DE79B72A61031F0090E61D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5C93L24A22;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxwowo.StandoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Stando;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14DE79852A61031E0090E61D /* Build configuration list for PBXProject "Stando" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14DE79AD2A61031F0090E61D /* Debug */,
+				14DE79AE2A61031F0090E61D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14DE79AF2A61031F0090E61D /* Build configuration list for PBXNativeTarget "Stando" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14DE79B02A61031F0090E61D /* Debug */,
+				14DE79B12A61031F0090E61D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14DE79B22A61031F0090E61D /* Build configuration list for PBXNativeTarget "StandoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14DE79B32A61031F0090E61D /* Debug */,
+				14DE79B42A61031F0090E61D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14DE79B52A61031F0090E61D /* Build configuration list for PBXNativeTarget "StandoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14DE79B62A61031F0090E61D /* Debug */,
+				14DE79B72A61031F0090E61D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14DE79822A61031E0090E61D /* Project object */;
+}
