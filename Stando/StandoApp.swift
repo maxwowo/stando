@@ -14,9 +14,13 @@ struct StandoApp: App {
 //            ContentView()
 //        }
         MenuBarExtra("Stando", image: "figure.seated.side") {
-            Label("15:21 Remaining", image: "clock")
-                .labelStyle(.titleAndIcon)
-            
+            Button(action: {
+                print("Clock tapped")
+            }) {
+                Image("clock")
+                Text("Remaining Duration")
+            }
+
             Divider()
             
             Button(action: {
