@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		14DE798E2A61031E0090E61D /* StandoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE798D2A61031E0090E61D /* StandoApp.swift */; };
-		14DE79902A61031E0090E61D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE798F2A61031E0090E61D /* ContentView.swift */; };
 		14DE79922A61031F0090E61D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14DE79912A61031F0090E61D /* Assets.xcassets */; };
 		14DE79952A61031F0090E61D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14DE79942A61031F0090E61D /* Preview Assets.xcassets */; };
 		14DE79A02A61031F0090E61D /* StandoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE799F2A61031F0090E61D /* StandoTests.swift */; };
 		14DE79AA2A61031F0090E61D /* StandoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE79A92A61031F0090E61D /* StandoUITests.swift */; };
 		14DE79AC2A61031F0090E61D /* StandoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE79AB2A61031F0090E61D /* StandoUITestsLaunchTests.swift */; };
+		14DE79BF2A6133100090E61D /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE79BE2A6133100090E61D /* MenuBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		14DE798A2A61031E0090E61D /* Stando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stando.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14DE798D2A61031E0090E61D /* StandoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandoApp.swift; sourceTree = "<group>"; };
-		14DE798F2A61031E0090E61D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		14DE79912A61031F0090E61D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14DE79942A61031F0090E61D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		14DE79962A61031F0090E61D /* Stando.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Stando.entitlements; sourceTree = "<group>"; };
@@ -45,6 +44,7 @@
 		14DE79A52A61031F0090E61D /* StandoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StandoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14DE79A92A61031F0090E61D /* StandoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandoUITests.swift; sourceTree = "<group>"; };
 		14DE79AB2A61031F0090E61D /* StandoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		14DE79BE2A6133100090E61D /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +96,10 @@
 			isa = PBXGroup;
 			children = (
 				14DE798D2A61031E0090E61D /* StandoApp.swift */,
-				14DE798F2A61031E0090E61D /* ContentView.swift */,
 				14DE79912A61031F0090E61D /* Assets.xcassets */,
 				14DE79962A61031F0090E61D /* Stando.entitlements */,
 				14DE79932A61031F0090E61D /* Preview Content */,
+				14DE79BE2A6133100090E61D /* MenuBarView.swift */,
 			);
 			path = Stando;
 			sourceTree = "<group>";
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14DE79902A61031E0090E61D /* ContentView.swift in Sources */,
+				14DE79BF2A6133100090E61D /* MenuBarView.swift in Sources */,
 				14DE798E2A61031E0090E61D /* StandoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
