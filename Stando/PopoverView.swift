@@ -19,7 +19,7 @@ struct PopoverView: View {
             ZStack {
                 ProgressView(progress: 0.8)
                     .frame(width: 200, height: 200)
-                VStack {
+                VStack(spacing: 4) {
                     Text("15:00")
                         .font(.largeTitle)
                     Text("\(Image(isSitting ? "figure.seated.side" : "figure.stand")) \(isSitting ? "Sitting" : "Standing")")
@@ -55,6 +55,43 @@ struct PopoverView: View {
                     Text("1000")
                         .font(.title2)
                 }
+            }
+            
+            HStack(spacing: 12) {
+                Button(action: {
+                    print("stand clicked")
+                }, label: {
+                    Image("pause")
+                        .font(.title3)
+                        .padding()
+                        .clipShape(Circle())
+                })
+                .buttonStyle(.plain)
+                .help("Pause")
+
+                Button(action: {
+                    print("stand clicked")
+                }, label: {
+                    Image("figure.stand")
+                        .font(.title3)
+                        .padding()
+                        .background(Color.accentColor)
+                        .clipShape(Circle())
+                })
+                .buttonStyle(.plain)
+                .help("Start standing")
+                
+                Button(action: {
+                    print("stand clicked")
+                }, label: {
+                    Image("restart")
+                        .font(.title3)
+                        .background(.background)
+                        .padding()
+                        .clipShape(Circle())
+                })
+                .buttonStyle(.plain)
+                .help("Restart")
             }
         }
         .padding(24)
