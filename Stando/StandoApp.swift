@@ -15,7 +15,8 @@ struct StandoApp: App {
     
     var body: some Scene {
         MenuBarExtra("Stando", image: isSitting ? "figure.seated.side" : "figure.stand") {
-            MenuBarView(isSitting: $isSitting)
+            PopoverView(isSitting: $isSitting)
         }
+        .menuBarExtraStyle(.window)
     }
 }
