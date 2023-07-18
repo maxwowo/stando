@@ -29,7 +29,7 @@ struct ProgressView: View {
                 .rotationEffect(.degrees(-90))
                 .animation(.easeOut, value: 1 - progress)
         }
-        .padding()
+        .padding(5)
     }
 }
 

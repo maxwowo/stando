@@ -11,7 +11,7 @@ struct PopoverView: View {
     @Binding var isSitting: Bool
     
     var body: some View {
-        VStack {
+        VStack(spacing: 24) {
             Text("Stando")
                 .font(.largeTitle)
                 .bold()
@@ -57,7 +57,7 @@ struct PopoverView: View {
                 }
             }
         }
-        .padding()
+        .padding(24)
     }
 }
 
