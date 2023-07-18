@@ -57,14 +57,12 @@ struct PopoverView: View {
                 }
             }
             
-            HStack(spacing: 12) {
+            HStack(spacing: 24) {
                 Button(action: {
                     print("stand clicked")
                 }, label: {
                     Image("pause")
-                        .font(.title3)
-                        .padding()
-                        .clipShape(Circle())
+                        .font(.title2)
                 })
                 .buttonStyle(.plain)
                 .help("Pause")
@@ -73,7 +71,7 @@ struct PopoverView: View {
                     print("stand clicked")
                 }, label: {
                     Image("figure.stand")
-                        .font(.title3)
+                        .font(.title2)
                         .padding()
                         .background(Color.accentColor)
                         .clipShape(Circle())
@@ -85,10 +83,7 @@ struct PopoverView: View {
                     print("stand clicked")
                 }, label: {
                     Image("restart")
-                        .font(.title3)
-                        .background(.background)
-                        .padding()
-                        .clipShape(Circle())
+                        .font(.title2)
                 })
                 .buttonStyle(.plain)
                 .help("Restart")
