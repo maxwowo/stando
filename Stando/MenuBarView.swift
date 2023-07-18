@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct MenuBarView: View {
+    @Binding var isSitting: Bool
+    
     var body: some View {
-        Button("Open Stando") {
+        Button(action: {
             print("Open tapped")
+        }) {
+            Text("Open Stando")
         }
 
         Divider()
@@ -34,8 +38,8 @@ struct MenuBarView: View {
         Button(action: {
             print("Start standing tapped")
         }) {
-            Image("figure.stand")
-            Text("Start Standing")
+            Image(isSitting ?  "figure.stand" : "figure.seated.side")
+            Text(isSitting ? "Start Standing" : "Start Sitting")
         }
         
         Divider()
@@ -46,14 +50,16 @@ struct MenuBarView: View {
         
         Divider()
         
-        Button("Quit") {
+        Button(action: {
             NSApplication.shared.terminate(nil)
+        }) {
+            Text("Quit")
         }
     }
 }
 
 struct MenuBarView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuBarView()
+        MenuBarView(isSitting: .constant(true))
     }
 }

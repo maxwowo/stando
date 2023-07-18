@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct StandoApp: App {
+    @State private var isSitting = true
+    @State private var isPaused = false
+    @State private var duration = 0
+    
     var body: some Scene {
-        MenuBarExtra("Stando", image: "figure.seated.side") {
-            MenuBarView()
+        MenuBarExtra("Stando", image: isSitting ? "figure.seated.side" : "figure.stand") {
+            MenuBarView(isSitting: $isSitting)
         }
     }
 }
