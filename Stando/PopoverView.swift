@@ -12,9 +12,24 @@ struct PopoverView: View {
     
     var body: some View {
         VStack(spacing: 24) {
-            Text("Stando")
-                .font(.largeTitle)
-                .bold()
+            ZStack {
+                Text("Stando")
+                    .font(.largeTitle)
+                    .bold()
+
+                HStack {
+                    Spacer()
+                    
+                    Button(action: {
+                        print("stand clicked")
+                    }, label: {
+                        Image("gear")
+                            .font(.title2)
+                    })
+                    .buttonStyle(.plain)
+                    .help("Settings")
+                }
+            }
             
             ZStack {
                 ProgressView(progress: 0.8)
@@ -89,6 +104,7 @@ struct PopoverView: View {
                 .help("Restart")
             }
         }
+        .frame(width: 200)
         .padding(24)
     }
 }
