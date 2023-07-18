@@ -9,11 +9,8 @@ import SwiftUI
 
 struct MenuBarView: View {
     var body: some View {
-        Button(action: {
-            print("Clock tapped")
-        }) {
-            Image("clock")
-            Text("Remaining Duration")
+        Button("Open Stando") {
+            print("Open tapped")
         }
 
         Divider()
