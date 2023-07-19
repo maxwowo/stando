@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		143D74B22A67A415006CD07E /* SymbolButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143D74B12A67A415006CD07E /* SymbolButtonView.swift */; };
 		143D74B42A67C66B006CD07E /* HoverableSymbolButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143D74B32A67C66B006CD07E /* HoverableSymbolButtonView.swift */; };
+		143D74B62A67CBB7006CD07E /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143D74B52A67CBB7006CD07E /* Dimensions.swift */; };
 		14DE267D2A6673A100754CC9 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE267C2A6673A100754CC9 /* ProgressView.swift */; };
 		14DE267F2A6674AF00754CC9 /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE267E2A6674AF00754CC9 /* PopoverView.swift */; };
 		14DE798E2A61031E0090E61D /* StandoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE798D2A61031E0090E61D /* StandoApp.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		143D74B12A67A415006CD07E /* SymbolButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolButtonView.swift; sourceTree = "<group>"; };
 		143D74B32A67C66B006CD07E /* HoverableSymbolButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverableSymbolButtonView.swift; sourceTree = "<group>"; };
+		143D74B52A67CBB7006CD07E /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
 		14DE267C2A6673A100754CC9 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		14DE267E2A6674AF00754CC9 /* PopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
 		14DE798A2A61031E0090E61D /* Stando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stando.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +83,7 @@
 		14DE79812A61031E0090E61D = {
 			isa = PBXGroup;
 			children = (
+				143D74B52A67CBB7006CD07E /* Dimensions.swift */,
 				14DE798C2A61031E0090E61D /* Stando */,
 				14DE799E2A61031F0090E61D /* StandoTests */,
 				14DE79A82A61031F0090E61D /* StandoUITests */,
@@ -270,6 +273,7 @@
 			files = (
 				143D74B42A67C66B006CD07E /* HoverableSymbolButtonView.swift in Sources */,
 				14DE267D2A6673A100754CC9 /* ProgressView.swift in Sources */,
+				143D74B62A67CBB7006CD07E /* Dimensions.swift in Sources */,
 				14DE267F2A6674AF00754CC9 /* PopoverView.swift in Sources */,
 				143D74B22A67A415006CD07E /* SymbolButtonView.swift in Sources */,
 				14DE798E2A61031E0090E61D /* StandoApp.swift in Sources */,

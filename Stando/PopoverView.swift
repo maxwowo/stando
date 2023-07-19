@@ -33,7 +33,7 @@ struct PopoverView: View {
             
             ZStack {
                 ProgressView(progress: 0.8)
-                    .frame(width: 200, height: 200)
+                    .frame(width: Dimensions.screenWidth, height: Dimensions.screenWidth)
                 VStack(spacing: 4) {
                     Text("15:00")
                         .font(.largeTitle)
@@ -90,7 +90,7 @@ struct PopoverView: View {
                 .help("Restart")
             }
         }
-        .frame(width: 200)
+        .frame(width: Dimensions.screenWidth)
         .padding(24)
     }
 }
