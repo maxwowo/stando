@@ -73,7 +73,7 @@ struct PopoverView: View {
                 }
             }
             
-            HStack(spacing: 6) {
+            HStack(spacing: 12) {
                 HoverableSymbolButtonView(imageName: "pause") {
                     
                 }
