@@ -61,6 +61,7 @@ struct PopoverView: View {
                     Text("1.12h")
                         .font(.title2)
                 }
+                
                 Divider()
                     .frame(height: 30)
                 
