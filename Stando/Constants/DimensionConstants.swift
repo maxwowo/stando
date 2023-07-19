@@ -7,6 +7,6 @@
 
 import SwiftUI
 
-struct Dimensions {
+struct DimensionConstants {
     static let screenWidth: CGFloat = 200
 }

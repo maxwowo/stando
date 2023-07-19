@@ -9,13 +9,14 @@ import SwiftUI
 
 @main
 struct StandoApp: App {
-    @State private var isSitting = true
-    @State private var isPaused = false
-    @State private var duration = 0
+    @StateObject var set = SetModel()
+    @StateObject var movement = MovementModel()
     
     var body: some Scene {
-        MenuBarExtra("Stando", image: isSitting ? "figure.seated.side" : "figure.stand") {
-            PopoverView(isSitting: $isSitting)
+        MenuBarExtra("Stando", image: set.isSitting ? "figure.seated.side" : "figure.stand") {
+            PopoverView()
+                .environmentObject(set)
+                .environmentObject(movement)
         }
         .menuBarExtraStyle(.window)
     }

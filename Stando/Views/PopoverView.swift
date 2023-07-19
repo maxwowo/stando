@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct PopoverView: View {
-    @Binding var isSitting: Bool
-    
+    @EnvironmentObject private var set: SetModel
+    @EnvironmentObject private var movement: MovementModel
+
     var body: some View {
         VStack(spacing: 24) {
             ZStack {
@@ -33,12 +34,12 @@ struct PopoverView: View {
             
             ZStack {
                 ProgressView(progress: 0.8)
-                    .frame(width: Dimensions.screenWidth, height: Dimensions.screenWidth)
+                    .frame(width: DimensionConstants.screenWidth, height: DimensionConstants.screenWidth)
                 VStack(spacing: 4) {
                     Text("15:00")
                         .font(.largeTitle)
                         .monospacedDigit()
-                    Text("\(Image(isSitting ? "figure.seated.side" : "figure.stand")) \(isSitting ? "Sitting" : "Standing")")
+                    Text("\(Image(set.isSitting ? "figure.seated.side" : "figure.stand")) \(set.isSitting ? "Sitting" : "Standing")")
                 }
             }
             
@@ -69,7 +70,7 @@ struct PopoverView: View {
                     Text("Calories")
                         .font(.caption)
                         .foregroundColor(Color.primary.opacity(0.5))
-                    Text("1000")
+                    Text("195.5")
                         .font(.title2)
                 }
             }
@@ -91,13 +92,15 @@ struct PopoverView: View {
                 .help("Restart")
             }
         }
-        .frame(width: Dimensions.screenWidth)
+        .frame(width: DimensionConstants.screenWidth)
         .padding(24)
     }
 }
 
 struct PopoverView_Previews: PreviewProvider {
     static var previews: some View {
-        PopoverView(isSitting: .constant(true))
+        PopoverView()
+            .environmentObject(SetModel(isSitting: true, durationSeconds: 123))
+            .environmentObject(MovementModel(sitDurationSeconds: 396, standDurationSeconds: 4428, caloriesBurned: 195.5))
     }
 }
