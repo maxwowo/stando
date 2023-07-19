@@ -14,7 +14,7 @@ struct ProgressView: View {
         ZStack {
             Circle()
                 .stroke(
-                    Color.accentColor.opacity(0.5),
+                    Color.primary.opacity(0.5),
                     lineWidth: 10
                 )
             Circle()

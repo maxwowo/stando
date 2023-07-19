@@ -89,7 +89,7 @@ struct PopoverView: View {
                     Image("figure.stand")
                         .font(.title2)
                         .padding()
-                        .foregroundColor(Color.white.opacity(0.85))
+                        .foregroundColor(Color("primaryButtonForeground"))
                         .background(Color.accentColor)
                         .clipShape(Circle())
                 }
