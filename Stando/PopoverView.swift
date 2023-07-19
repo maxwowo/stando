@@ -73,36 +73,20 @@ struct PopoverView: View {
                 }
             }
             
-            HStack(spacing: 24) {
-                Button(action: {
-                    print("stand clicked")
-                }) {
-                    Image("pause")
-                        .font(.title2)
+            HStack(spacing: 6) {
+                HoverableSymbolButtonView(imageName: "pause") {
+                    
                 }
-                .buttonStyle(.plain)
                 .help("Pause")
-
-                Button(action: {
-                    print("stand clicked")
-                }) {
-                    Image("figure.stand")
-                        .font(.title2)
-                        .padding()
-                        .foregroundColor(Color("primaryButtonForeground"))
-                        .background(Color.accentColor)
-                        .clipShape(Circle())
+                
+                SymbolButtonView(imageName: "figure.stand", backgroundColor: Color.accentColor) {
+                    
                 }
-                .buttonStyle(.plain)
                 .help("Stand up")
                 
-                Button(action: {
-                    print("stand clicked")
-                }) {
-                    Image("restart")
-                        .font(.title2)
+                HoverableSymbolButtonView(imageName: "restart") {
+                    
                 }
-                .buttonStyle(.plain)
                 .help("Restart")
             }
         }
