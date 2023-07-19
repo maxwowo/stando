@@ -10,6 +10,7 @@ import SwiftUI
 struct SymbolButtonView: View {
     let imageName: String
     let backgroundColor: Color
+    let foregroundColor: Color
     let action: () -> Void
     
     var body: some View {
@@ -18,6 +19,7 @@ struct SymbolButtonView: View {
                 .font(.title2)
                 .frame(width: 40, height: 40)
                 .background(backgroundColor)
+                .foregroundColor(foregroundColor)
                 .clipShape(Circle())
         }
         .buttonStyle(.plain)
@@ -27,10 +29,10 @@ struct SymbolButtonView: View {
 struct SymbolButtonView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            SymbolButtonView(imageName: "figure.stand", backgroundColor: Color.accentColor) {
+            SymbolButtonView(imageName: "figure.stand", backgroundColor: Color.accentColor, foregroundColor: Color.primary) {
                 print("Button clicked")
             }
-            SymbolButtonView(imageName: "figure.stand", backgroundColor: Color.indigo) {
+            SymbolButtonView(imageName: "figure.stand", backgroundColor: Color.indigo, foregroundColor: Color.primary) {
                 print("Button clicked")
             }
         }

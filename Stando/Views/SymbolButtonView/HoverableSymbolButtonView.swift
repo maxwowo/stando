@@ -14,7 +14,7 @@ struct HoverableSymbolButtonView: View {
     @State private var isHovered = false
 
     var body: some View {
-        SymbolButtonView(imageName: imageName, backgroundColor: isHovered ? Color.primary.opacity(0.1) : Color.clear, action: action)
+        SymbolButtonView(imageName: imageName, backgroundColor: isHovered ? Color.primary.opacity(0.1) : Color.clear, foregroundColor: Color.primary, action: action)
         .onHover { hovering in
             self.isHovered = hovering
         }

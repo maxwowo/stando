@@ -81,8 +81,7 @@ struct PopoverView: View {
                 }
                 .help("Pause")
                 
-                SymbolButtonView(imageName: "figure.stand", backgroundColor: Color.accentColor) {
-                    
+                SymbolButtonView(imageName: "figure.stand", backgroundColor: Color.accentColor, foregroundColor: Color("primaryButtonForeground")) {
                 }
                 .help("Stand up")
                 
