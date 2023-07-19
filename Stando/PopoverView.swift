@@ -37,6 +37,7 @@ struct PopoverView: View {
                 VStack(spacing: 4) {
                     Text("15:00")
                         .font(.largeTitle)
+                        .monospacedDigit()
                     Text("\(Image(isSitting ? "figure.seated.side" : "figure.stand")) \(isSitting ? "Sitting" : "Standing")")
                 }
             }
