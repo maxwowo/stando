@@ -83,7 +83,6 @@
 		14DE79812A61031E0090E61D = {
 			isa = PBXGroup;
 			children = (
-				143D74B52A67CBB7006CD07E /* Dimensions.swift */,
 				14DE798C2A61031E0090E61D /* Stando */,
 				14DE799E2A61031F0090E61D /* StandoTests */,
 				14DE79A82A61031F0090E61D /* StandoUITests */,
@@ -104,6 +103,7 @@
 		14DE798C2A61031E0090E61D /* Stando */ = {
 			isa = PBXGroup;
 			children = (
+				143D74B52A67CBB7006CD07E /* Dimensions.swift */,
 				14DE798D2A61031E0090E61D /* StandoApp.swift */,
 				14DE79912A61031F0090E61D /* Assets.xcassets */,
 				14DE79962A61031F0090E61D /* Stando.entitlements */,
