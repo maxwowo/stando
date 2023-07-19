@@ -100,4 +100,3 @@ struct PopoverView_Previews: PreviewProvider {
         PopoverView(isSitting: .constant(true))
     }
 }
-

@@ -80,6 +80,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		143D74B72A67CDDC006CD07E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				143D74B52A67CBB7006CD07E /* Dimensions.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		143D74B82A67CE05006CD07E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				143D74B92A67CE19006CD07E /* SymbolButtonView */,
+				14DE267E2A6674AF00754CC9 /* PopoverView.swift */,
+				14DE267C2A6673A100754CC9 /* ProgressView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		143D74B92A67CE19006CD07E /* SymbolButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				143D74B32A67C66B006CD07E /* HoverableSymbolButtonView.swift */,
+				143D74B12A67A415006CD07E /* SymbolButtonView.swift */,
+			);
+			path = SymbolButtonView;
+			sourceTree = "<group>";
+		};
 		14DE79812A61031E0090E61D = {
 			isa = PBXGroup;
 			children = (
@@ -103,15 +130,12 @@
 		14DE798C2A61031E0090E61D /* Stando */ = {
 			isa = PBXGroup;
 			children = (
-				143D74B52A67CBB7006CD07E /* Dimensions.swift */,
+				143D74B82A67CE05006CD07E /* Views */,
+				143D74B72A67CDDC006CD07E /* Constants */,
 				14DE798D2A61031E0090E61D /* StandoApp.swift */,
 				14DE79912A61031F0090E61D /* Assets.xcassets */,
 				14DE79962A61031F0090E61D /* Stando.entitlements */,
 				14DE79932A61031F0090E61D /* Preview Content */,
-				14DE267C2A6673A100754CC9 /* ProgressView.swift */,
-				14DE267E2A6674AF00754CC9 /* PopoverView.swift */,
-				143D74B12A67A415006CD07E /* SymbolButtonView.swift */,
-				143D74B32A67C66B006CD07E /* HoverableSymbolButtonView.swift */,
 			);
 			path = Stando;
 			sourceTree = "<group>";
