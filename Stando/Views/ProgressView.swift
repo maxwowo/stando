@@ -2,38 +2,29 @@
 //  ProgressView.swift
 //  Stando
 //
-//  Created by Max Wo on 18/7/2023.
+//  Created by Max Wo on 20/7/2023.
 //
 
 import SwiftUI
 
 struct ProgressView: View {
-    let progress: Double
+    @EnvironmentObject private var settings: SettingsModel
+    @EnvironmentObject private var set: SetModel
     
     var body: some View {
         ZStack {
-            Circle()
-                .stroke(
-                    Color.primary.opacity(0.5),
-                    lineWidth: 10
-                )
-            Circle()
-                .trim(from: 0, to: 1 - progress)
-                .stroke(
-                    Color.accentColor,
-                    style: StrokeStyle(
-                        lineWidth: 10,
-                        lineCap: .round
-                    )
-                )
-                .rotationEffect(.degrees(-90))
+            ProgressBarView(progress: Double(set.durationSeconds) / Double(settings.getDurationSeconds(isSitting: set.isSitting)))
+                .frame(width: DimensionConstants.screenWidth, height: DimensionConstants.screenWidth)
+            
+            CountdownView()
         }
-        .padding(5)
     }
 }
 
 struct ProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressView(progress: 0.4)
+        ProgressView()
+            .environmentObject(SetModel(isSitting: true, durationSeconds: 123))
+            .environmentObject(SettingsModel())
     }
 }

@@ -16,12 +16,7 @@ struct PopoverView: View {
         VStack(spacing: 24) {
             HeaderView()
             
-            ZStack {
-                ProgressView(progress: Double(set.durationSeconds) / Double(settings.getDurationSeconds(isSitting: set.isSitting)))
-                    .frame(width: DimensionConstants.screenWidth, height: DimensionConstants.screenWidth)
-                
-                CountdownView()
-            }
+            ProgressView()
             
             MetricsView()
             
