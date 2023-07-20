@@ -48,7 +48,7 @@ struct PopoverView: View {
                     Text("Sitting")
                         .font(.caption)
                         .foregroundColor(Color.primary.opacity(0.5))
-                    Text("0.11h")
+                    Text("0.11 h")
                         .font(.title2)
                 }
                 
@@ -59,7 +59,7 @@ struct PopoverView: View {
                     Text("Standing")
                         .font(.caption)
                         .foregroundColor(Color.primary.opacity(0.5))
-                    Text("1.12h")
+                    Text("1.12 h")
                         .font(.title2)
                 }
                 
