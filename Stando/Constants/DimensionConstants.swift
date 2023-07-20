@@ -8,5 +8,5 @@
 import SwiftUI
 
 struct DimensionConstants {
-    static let screenWidth: CGFloat = 200
+    static let screenWidth: Double = 200
 }
