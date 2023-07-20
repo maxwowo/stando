@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ControlsView: View {
     @EnvironmentObject private var settings: SettingsModel
-    @EnvironmentObject private var set: PostureModel
+    @EnvironmentObject private var posture: PostureModel
     
     var body: some View {
         HStack(spacing: 12) {

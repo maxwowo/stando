@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ProgressView: View {
     @EnvironmentObject private var settings: SettingsModel
-    @EnvironmentObject private var set: PostureModel
+    @EnvironmentObject private var posture: PostureModel
     
     var body: some View {
         ZStack {
-            ProgressBarView(progress: Double(set.durationSeconds) / Double(settings.getDurationSeconds(isSitting: set.isSitting)))
+            ProgressBarView(progress: Double(posture.durationSeconds) / Double(settings.getDurationSeconds(isSitting: posture.isSitting)))
                 .frame(width: DimensionConstants.screenWidth, height: DimensionConstants.screenWidth)
             
             CountdownView()

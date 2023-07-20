@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PopoverView: View {
     @EnvironmentObject private var settings: SettingsModel
-    @EnvironmentObject private var set: PostureModel
+    @EnvironmentObject private var posture: PostureModel
     @EnvironmentObject private var metrics: MetricsModel
     
     var body: some View {
