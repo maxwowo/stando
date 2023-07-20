@@ -18,6 +18,7 @@
 		149CF3222A693E3300DB79D0 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149CF3212A693E3300DB79D0 /* HeaderView.swift */; };
 		149CF3252A693FD800DB79D0 /* MetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149CF3242A693FD800DB79D0 /* MetricView.swift */; };
 		149CF3272A6943E900DB79D0 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149CF3262A6943E900DB79D0 /* ProgressView.swift */; };
+		149CF3292A6944AB00DB79D0 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149CF3282A6944AB00DB79D0 /* ControlsView.swift */; };
 		14DE267D2A6673A100754CC9 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE267C2A6673A100754CC9 /* ProgressBarView.swift */; };
 		14DE267F2A6674AF00754CC9 /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE267E2A6674AF00754CC9 /* PopoverView.swift */; };
 		14DE798E2A61031E0090E61D /* StandoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE798D2A61031E0090E61D /* StandoApp.swift */; };
@@ -57,6 +58,7 @@
 		149CF3212A693E3300DB79D0 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		149CF3242A693FD800DB79D0 /* MetricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricView.swift; sourceTree = "<group>"; };
 		149CF3262A6943E900DB79D0 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		149CF3282A6944AB00DB79D0 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 		14DE267C2A6673A100754CC9 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		14DE267E2A6674AF00754CC9 /* PopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
 		14DE798A2A61031E0090E61D /* Stando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stando.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +116,7 @@
 				149CF31D2A693A0900DB79D0 /* CountdownView.swift */,
 				149CF3212A693E3300DB79D0 /* HeaderView.swift */,
 				149CF3262A6943E900DB79D0 /* ProgressView.swift */,
+				149CF3282A6944AB00DB79D0 /* ControlsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				143D74B22A67A415006CD07E /* SymbolButtonView.swift in Sources */,
 				149CF3272A6943E900DB79D0 /* ProgressView.swift in Sources */,
 				149CF31C2A69311B00DB79D0 /* SettingsModel.swift in Sources */,
+				149CF3292A6944AB00DB79D0 /* ControlsView.swift in Sources */,
 				14DE798E2A61031E0090E61D /* StandoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

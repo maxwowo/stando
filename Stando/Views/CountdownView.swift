@@ -16,7 +16,7 @@ struct CountdownView: View {
         
         return String(format: "%02d:%02d", remainingDurationSeconds / 60, remainingDurationSeconds % 60)
     }
-
+    
     var body: some View {
         VStack(spacing: 4) {
             Text(formattedRemainingTime)

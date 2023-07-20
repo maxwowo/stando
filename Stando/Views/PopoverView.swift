@@ -11,7 +11,7 @@ struct PopoverView: View {
     @EnvironmentObject private var settings: SettingsModel
     @EnvironmentObject private var set: SetModel
     @EnvironmentObject private var metrics: MetricsModel
-
+    
     var body: some View {
         VStack(spacing: 24) {
             HeaderView()
@@ -20,21 +20,7 @@ struct PopoverView: View {
             
             MetricsView()
             
-            HStack(spacing: 12) {
-                HoverableSymbolButtonView(imageName: "pause") {
-                    
-                }
-                .help("Pause")
-                
-                SymbolButtonView(imageName: "figure.stand", backgroundColor: Color.accentColor, foregroundColor: Color("primaryButtonForeground")) {
-                }
-                .help("Stand up")
-                
-                HoverableSymbolButtonView(imageName: "restart") {
-                    
-                }
-                .help("Restart")
-            }
+            ControlsView()
         }
         .frame(width: DimensionConstants.screenWidth)
         .padding(24)
