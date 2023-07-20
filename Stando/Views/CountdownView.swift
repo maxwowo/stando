@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CountdownView: View {
     @EnvironmentObject private var settings: SettingsModel
-    @EnvironmentObject private var set: SetModel
+    @EnvironmentObject private var set: PostureModel
     
     private var formattedRemainingTime: String {
         let remainingDurationSeconds = settings.getDurationSeconds(isSitting: set.isSitting) - set.durationSeconds
@@ -30,7 +30,7 @@ struct CountdownView: View {
 struct CountdownView_Previews: PreviewProvider {
     static var previews: some View {
         CountdownView()
-            .environmentObject(SetModel(isSitting: true, durationSeconds: 123))
+            .environmentObject(PostureModel(isSitting: true, durationSeconds: 123))
             .environmentObject(SettingsModel())
     }
 }

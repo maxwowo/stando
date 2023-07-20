@@ -1,5 +1,5 @@
 //
-//  SetModel.swift
+//  PostureModel.swift
 //  Stando
 //
 //  Created by Max Wo on 19/7/2023.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-class SetModel: ObservableObject {
+class PostureModel: ObservableObject {
     @Published var isSitting: Bool
     @Published var durationSeconds: Int
     

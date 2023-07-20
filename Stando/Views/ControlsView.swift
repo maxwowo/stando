@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ControlsView: View {
     @EnvironmentObject private var settings: SettingsModel
-    @EnvironmentObject private var set: SetModel
+    @EnvironmentObject private var set: PostureModel
     
     var body: some View {
         HStack(spacing: 12) {
@@ -33,7 +33,7 @@ struct ControlsView: View {
 struct ControlsView_Previews: PreviewProvider {
     static var previews: some View {
         ControlsView()
-            .environmentObject(SetModel(isSitting: true, durationSeconds: 123))
+            .environmentObject(PostureModel(isSitting: true, durationSeconds: 123))
             .environmentObject(SettingsModel())
     }
 }

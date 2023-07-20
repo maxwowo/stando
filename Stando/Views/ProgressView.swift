@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProgressView: View {
     @EnvironmentObject private var settings: SettingsModel
-    @EnvironmentObject private var set: SetModel
+    @EnvironmentObject private var set: PostureModel
     
     var body: some View {
         ZStack {
@@ -24,7 +24,7 @@ struct ProgressView: View {
 struct ProgressView_Previews: PreviewProvider {
     static var previews: some View {
         ProgressView()
-            .environmentObject(SetModel(isSitting: true, durationSeconds: 123))
+            .environmentObject(PostureModel(isSitting: true, durationSeconds: 123))
             .environmentObject(SettingsModel())
     }
 }
