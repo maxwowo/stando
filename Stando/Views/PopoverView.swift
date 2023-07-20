@@ -103,6 +103,6 @@ struct PopoverView_Previews: PreviewProvider {
         PopoverView()
             .environmentObject(SetModel(isSitting: true, durationSeconds: 123))
             .environmentObject(MovementModel(sitDurationSeconds: 396, standDurationSeconds: 4428, caloriesBurned: 195.5))
-            .environmentObject(SettingsModel())
+            .environmentObject(SettingsModel(sitDurationSeconds: 900, standDurationSeconds: 2700))
     }
 }

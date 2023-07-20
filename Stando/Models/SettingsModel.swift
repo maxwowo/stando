@@ -17,6 +17,15 @@ class SettingsModel: ObservableObject {
     @AppStorage("sitDurationSeconds") var sitDurationSeconds = 900
     @AppStorage("standDurationSeconds") var standDurationSeconds = 2700
     
+    init(isLaunchingAtLogin: Bool = false, isPausingAtLaunch: Bool = false, isSittingAtLaunch: Bool = false, isPausingAtEndOfSet: Bool = false, sitDurationSeconds: Int = 900, standDurationSeconds: Int = 2700) {
+        self.isLaunchingAtLogin = isLaunchingAtLogin
+        self.isPausingAtLaunch = isPausingAtLaunch
+        self.isSittingAtLaunch = isSittingAtLaunch
+        self.isPausingAtEndOfSet = isPausingAtEndOfSet
+        self.sitDurationSeconds = sitDurationSeconds
+        self.standDurationSeconds = standDurationSeconds
+    }
+    
     func getDurationSeconds(isSitting: Bool) -> Int {
         return isSitting ? sitDurationSeconds : standDurationSeconds
     }
