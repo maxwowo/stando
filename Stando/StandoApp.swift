@@ -11,14 +11,14 @@ import SwiftUI
 struct StandoApp: App {
     @StateObject private var settings = SettingsModel()
     @StateObject private var set = SetModel()
-    @StateObject private var movement = MovementModel()
+    @StateObject private var metrics = MetricsModel()
     
     var body: some Scene {
         MenuBarExtra("Stando", image: set.isSitting ? "figure.seated.side" : "figure.stand") {
             PopoverView()
                 .environmentObject(settings)
                 .environmentObject(set)
-                .environmentObject(movement)
+                .environmentObject(metrics)
         }
         .menuBarExtraStyle(.window)
     }

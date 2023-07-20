@@ -10,69 +10,20 @@ import SwiftUI
 struct PopoverView: View {
     @EnvironmentObject private var settings: SettingsModel
     @EnvironmentObject private var set: SetModel
-    @EnvironmentObject private var movement: MovementModel
+    @EnvironmentObject private var metrics: MetricsModel
 
     var body: some View {
         VStack(spacing: 24) {
-            ZStack {
-                Text("Stando")
-                    .font(.largeTitle)
-                    .bold()
-
-                HStack {
-                    Spacer()
-                    
-                    Button(action: {
-                        print("stand clicked")
-                    }, label: {
-                        Image("gear")
-                            .font(.title2)
-                    })
-                    .buttonStyle(.plain)
-                    .help("Settings")
-                }
-            }
+            HeaderView()
             
             ZStack {
                 ProgressView(progress: Double(set.durationSeconds) / Double(settings.getDurationSeconds(isSitting: set.isSitting)))
                     .frame(width: DimensionConstants.screenWidth, height: DimensionConstants.screenWidth)
                 
                 CountdownView()
-                    .environmentObject(settings)
-                    .environmentObject(set)
             }
             
-            HStack(spacing: 12) {
-                VStack {
-                    Text("Sitting")
-                        .font(.caption)
-                        .foregroundColor(Color.primary.opacity(0.5))
-                    Text("0.11 h")
-                        .font(.title2)
-                }
-                
-                Divider()
-                    .frame(height: 30)
-                
-                VStack {
-                    Text("Standing")
-                        .font(.caption)
-                        .foregroundColor(Color.primary.opacity(0.5))
-                    Text("1.12 h")
-                        .font(.title2)
-                }
-                
-                Divider()
-                    .frame(height: 30)
-                
-                VStack {
-                    Text("Calories")
-                        .font(.caption)
-                        .foregroundColor(Color.primary.opacity(0.5))
-                    Text("195.5")
-                        .font(.title2)
-                }
-            }
+            MetricsView()
             
             HStack(spacing: 12) {
                 HoverableSymbolButtonView(imageName: "pause") {
@@ -99,7 +50,7 @@ struct PopoverView_Previews: PreviewProvider {
     static var previews: some View {
         PopoverView()
             .environmentObject(SetModel(isSitting: true, durationSeconds: 123))
-            .environmentObject(MovementModel(sitDurationSeconds: 396, standDurationSeconds: 4428, caloriesBurned: 195.5))
+            .environmentObject(MetricsModel(sitDurationSeconds: 396, standDurationSeconds: 4428, caloriesBurned: 195.5))
             .environmentObject(SettingsModel())
     }
 }

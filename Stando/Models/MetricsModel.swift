@@ -1,5 +1,5 @@
 //
-//  MovementModel.swift
+//  MetricsModel.swift
 //  Stando
 //
 //  Created by Max Wo on 19/7/2023.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-class MovementModel: ObservableObject {
+class MetricsModel: ObservableObject {
     @Published var sitDurationSeconds: Int
     @Published var standDurationSeconds: Int
     @Published var caloriesBurned: Double
