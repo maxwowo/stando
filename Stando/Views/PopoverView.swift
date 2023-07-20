@@ -11,6 +11,7 @@ struct PopoverView: View {
     @EnvironmentObject private var settings: SettingsModel
     @EnvironmentObject private var posture: PostureModel
     @EnvironmentObject private var metrics: MetricsModel
+    @EnvironmentObject private var timer: TimerModel
     
     var body: some View {
         VStack(spacing: 24) {
