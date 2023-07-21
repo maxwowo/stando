@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 class TimerModel: ObservableObject {
     @AppStorage(PreferenceConstants.isPausingAtLaunch) private var isPausingAtLaunch = false
