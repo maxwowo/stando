@@ -27,7 +27,7 @@ struct ControlsView: View {
             .help("Stand up")
 
             HoverableSymbolButtonView(imageName: "restart") {
-
+                timer.resetTimer()
             }
             .help("Restart")
         }
