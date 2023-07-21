@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HeaderView: View {
+    @State private var isShowingMenu = false
+
     var body: some View {
         ZStack {
             Text("Stando")
@@ -17,14 +19,21 @@ struct HeaderView: View {
             HStack {
                 Spacer()
 
-                Button(action: {
-                    print("stand clicked")
-                }, label: {
+                Menu {
+                    Button("Preferences") {
+                        print("pref clicked")
+                    }
+
+                    Divider()
+
+                    Button("Quit") {
+                        NSApplication.shared.terminate(nil)
+                    }
+                } label: {
                     Image("gear")
                         .font(.title2)
-                })
+                }
                 .buttonStyle(.plain)
-                .help("Settings")
             }
         }
     }

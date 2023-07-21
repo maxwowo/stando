@@ -14,6 +14,10 @@ struct StandoApp: App {
     @StateObject private var timer = TimerModel()
 
     var body: some Scene {
+        Settings {
+            PreferencesView()
+        }
+
         MenuBarExtra("Stando", image: posture.isSitting ? "figure.seated.side" : "figure.stand") {
             PopoverView()
                 .environmentObject(posture)
