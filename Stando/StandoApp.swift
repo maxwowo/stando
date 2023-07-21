@@ -23,9 +23,6 @@ struct StandoApp: App {
                 .environmentObject(posture)
                 .environmentObject(metrics)
                 .environmentObject(timer)
-                .onAppear {
-                    timer.startTimer()
-                }
         }
         .menuBarExtraStyle(.window)
     }
