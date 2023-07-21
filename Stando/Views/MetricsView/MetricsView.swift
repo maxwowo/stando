@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MetricsView: View {
     @EnvironmentObject private var settings: SettingsModel
+    @EnvironmentObject private var timer: TimerModel
     @EnvironmentObject private var posture: PostureModel
     @EnvironmentObject private var metrics: MetricsModel
 
@@ -38,7 +39,8 @@ struct MetricsView: View {
 struct MetricsView_Previews: PreviewProvider {
     static var previews: some View {
         MetricsView()
-            .environmentObject(PostureModel(isSitting: true, durationSeconds: 123))
+            .environmentObject(PostureModel(posture: Posture.sitting))
+            .environmentObject(TimerModel(durationSeconds: 123))
             .environmentObject(MetricsModel(sitDurationSeconds: 396, standDurationSeconds: 4428, caloriesBurned: 195.5))
             .environmentObject(SettingsModel())
     }

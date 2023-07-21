@@ -8,12 +8,18 @@
 import SwiftUI
 import Combine
 
+enum Posture {
+    case sitting, standing
+}
+
 class PostureModel: ObservableObject {
-    @Published var isSitting: Bool
-    @Published var durationSeconds: Int
+    @Published var posture: Posture
     
-    init(isSitting: Bool = true, durationSeconds: Int = 0) {
-        self.isSitting = isSitting
-        self.durationSeconds = durationSeconds
+    var isSitting: Bool {
+        posture == Posture.sitting
+    }
+    
+    init(posture: Posture = Posture.sitting) {
+        self.posture = posture
     }
 }

@@ -11,11 +11,10 @@ class TimerModel: ObservableObject {
     @Published var durationSeconds = 0
     
     private var timer: Timer?
-    
-    var onTimerTick: (() -> Void)?
-    
-    init() {
-        startTimer()
+
+    init(durationSeconds: Int = 0, timer: Timer? = nil) {
+        self.durationSeconds = durationSeconds
+        self.timer = timer
     }
     
     deinit {
@@ -25,7 +24,6 @@ class TimerModel: ObservableObject {
     func startTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
             self?.durationSeconds += 1
-            self?.onTimerTick?()
         }
     }
     

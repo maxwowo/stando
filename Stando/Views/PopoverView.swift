@@ -28,7 +28,8 @@ struct PopoverView: View {
 struct PopoverView_Previews: PreviewProvider {
     static var previews: some View {
         PopoverView()
-            .environmentObject(PostureModel(isSitting: true, durationSeconds: 123))
+            .environmentObject(PostureModel(posture: Posture.sitting))
+            .environmentObject(TimerModel(durationSeconds: 123))
             .environmentObject(MetricsModel(sitDurationSeconds: 396, standDurationSeconds: 4428, caloriesBurned: 195.5))
             .environmentObject(SettingsModel())
     }

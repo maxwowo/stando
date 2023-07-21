@@ -20,6 +20,7 @@ struct StandoApp: App {
                 .environmentObject(settings)
                 .environmentObject(posture)
                 .environmentObject(metrics)
+                .environmentObject(timer)
                 .onAppear {
                     timer.startTimer()
                 }
