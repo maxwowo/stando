@@ -10,11 +10,16 @@ import SwiftUI
 struct HoverableSymbolButtonView: View {
     let imageName: String
     let action: () -> Void
-    
+
     @State private var isHovered = false
 
     var body: some View {
-        SymbolButtonView(imageName: imageName, backgroundColor: isHovered ? Color.primary.opacity(0.1) : Color.clear, foregroundColor: Color.primary, action: action)
+        SymbolButtonView(
+            imageName: imageName,
+            backgroundColor: isHovered ? Color.primary.opacity(0.1) : Color.clear,
+            foregroundColor: Color.primary,
+            action: action
+        )
         .onHover { hovering in
             self.isHovered = hovering
         }

@@ -10,20 +10,24 @@ import SwiftUI
 struct ControlsView: View {
     @EnvironmentObject private var timer: TimerModel
     @EnvironmentObject private var posture: PostureModel
-    
+
     var body: some View {
         HStack(spacing: 12) {
             HoverableSymbolButtonView(imageName: timer.isTimerRunning ? "pause" : "play") {
                 timer.isTimerRunning ? timer.stopTimer() : timer.resumeTimer()
             }
             .help(timer.isTimerRunning ? "Pause" : "Resume")
-            
-            SymbolButtonView(imageName: "figure.stand", backgroundColor: Color.accentColor, foregroundColor: Color("primaryButtonForeground")) {
+
+            SymbolButtonView(
+                imageName: "figure.stand",
+                backgroundColor: Color.accentColor,
+                foregroundColor: Color("primaryButtonForeground")
+            ) {
             }
             .help("Stand up")
-            
+
             HoverableSymbolButtonView(imageName: "restart") {
-                
+
             }
             .help("Restart")
         }

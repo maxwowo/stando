@@ -13,12 +13,16 @@ struct ProgressView: View {
 
     @EnvironmentObject private var timer: TimerModel
     @EnvironmentObject private var posture: PostureModel
-    
+
+    private var durationSeconds: Int {
+        posture.isSitting ? sitDurationSeconds : standDurationSeconds
+    }
+
     var body: some View {
         ZStack {
-            ProgressBarView(progress: Double(timer.durationSeconds) / Double(posture.isSitting ? sitDurationSeconds : standDurationSeconds))
+            ProgressBarView(progress: Double(timer.durationSeconds) / Double(durationSeconds))
                 .frame(width: DimensionConstants.screenWidth, height: DimensionConstants.screenWidth)
-            
+
             CountdownView()
         }
     }

@@ -14,22 +14,28 @@ struct MetricsView: View {
 
     func formatDurationHours(durationSeconds: Int) -> String {
         let hours = Double(durationSeconds) / 3600
-        
+
         return String(format: "%.2f", hours)
     }
-    
+
     var body: some View {
         HStack(spacing: 12) {
-            MetricView(metricName: "Sitting", metricValue: "\(formatDurationHours(durationSeconds: metrics.sitDurationSeconds)) h")
-            
-            Divider()
-                .frame(height: 30)
-            
-            MetricView(metricName: "Standing", metricValue: "\(formatDurationHours(durationSeconds: metrics.standDurationSeconds)) h")
+            MetricView(
+                metricName: "Sitting",
+                metricValue: "\(formatDurationHours(durationSeconds: metrics.sitDurationSeconds)) h"
+            )
 
             Divider()
                 .frame(height: 30)
-            
+
+            MetricView(
+                metricName: "Standing",
+                metricValue: "\(formatDurationHours(durationSeconds: metrics.standDurationSeconds)) h"
+            )
+
+            Divider()
+                .frame(height: 30)
+
             MetricView(metricName: "Calories", metricValue: String(metrics.caloriesBurned))
         }
     }

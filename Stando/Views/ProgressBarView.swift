@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProgressBarView: View {
     let progress: Double
-    
+
     var body: some View {
         ZStack {
             Circle()

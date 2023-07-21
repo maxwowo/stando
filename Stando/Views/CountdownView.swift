@@ -10,22 +10,28 @@ import SwiftUI
 struct CountdownView: View {
     @AppStorage(SettingsConstants.sitDurationSeconds) private var sitDurationSeconds = 900
     @AppStorage(SettingsConstants.standDurationSeconds) private var standDurationSeconds = 2700
-    
+
     @EnvironmentObject private var timer: TimerModel
     @EnvironmentObject private var posture: PostureModel
-    
+
+    private var postureIcon: String {
+        posture.isSitting ? "figure.seated.side" : "figure.stand"
+    }
+
     private var formattedRemainingTime: String {
-        let remainingDurationSeconds = (posture.isSitting ? sitDurationSeconds : standDurationSeconds) - timer.durationSeconds
-        
+        let durationSeconds = posture.isSitting ? sitDurationSeconds : standDurationSeconds
+
+        let remainingDurationSeconds = durationSeconds - timer.durationSeconds
+
         return String(format: "%02d:%02d", remainingDurationSeconds / 60, remainingDurationSeconds % 60)
     }
-    
+
     var body: some View {
         VStack(spacing: 4) {
             Text(formattedRemainingTime)
                 .font(.largeTitle)
                 .monospacedDigit()
-            Text("\(Image(posture.isSitting ? "figure.seated.side" : "figure.stand")) \(posture.isSitting ? "Sitting" : "Standing")")
+            Text("\(Image(postureIcon)) \(posture.isSitting ? "Sitting" : "Standing")")
         }
     }
 }

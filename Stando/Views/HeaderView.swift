@@ -16,7 +16,7 @@ struct HeaderView: View {
 
             HStack {
                 Spacer()
-                
+
                 Button(action: {
                     print("stand clicked")
                 }, label: {

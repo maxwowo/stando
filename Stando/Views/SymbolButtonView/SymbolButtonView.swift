@@ -12,7 +12,7 @@ struct SymbolButtonView: View {
     let backgroundColor: Color
     let foregroundColor: Color
     let action: () -> Void
-    
+
     var body: some View {
         Button(action: action) {
             Image(imageName)
@@ -29,10 +29,18 @@ struct SymbolButtonView: View {
 struct SymbolButtonView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            SymbolButtonView(imageName: "figure.stand", backgroundColor: Color.accentColor, foregroundColor: Color.primary) {
+            SymbolButtonView(
+                imageName: "figure.stand",
+                backgroundColor: Color.accentColor,
+                foregroundColor: Color.primary
+            ) {
                 print("Button clicked")
             }
-            SymbolButtonView(imageName: "figure.stand", backgroundColor: Color.indigo, foregroundColor: Color.primary) {
+            SymbolButtonView(
+                imageName: "figure.stand",
+                backgroundColor: Color.indigo,
+                foregroundColor: Color.primary
+            ) {
                 print("Button clicked")
             }
         }

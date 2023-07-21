@@ -14,11 +14,11 @@ enum Posture {
 
 class PostureModel: ObservableObject {
     @Published var posture: Posture
-    
+
     var isSitting: Bool {
         posture == Posture.sitting
     }
-    
+
     init(posture: Posture = Posture.sitting) {
         self.posture = posture
     }
