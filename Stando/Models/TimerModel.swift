@@ -33,4 +33,10 @@ class TimerModel: ObservableObject {
         timer?.invalidate()
         timer = nil
     }
+    
+    func resetTimer() {
+        stopTimer()
+        durationSeconds = 0
+        startTimer()
+    }
 }

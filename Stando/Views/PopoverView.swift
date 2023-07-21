@@ -16,11 +16,8 @@ struct PopoverView: View {
     var body: some View {
         VStack(spacing: 24) {
             HeaderView()
-            
             ProgressView()
-            
             MetricsView()
-            
             ControlsView()
         }
         .frame(width: DimensionConstants.screenWidth)
