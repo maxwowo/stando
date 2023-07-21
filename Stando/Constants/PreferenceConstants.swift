@@ -1,5 +1,5 @@
 //
-//  SettingsConstants.swift
+//  PreferenceConstants.swift
 //  Stando
 //
 //  Created by Max Wo on 21/7/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SettingsConstants {
+struct PreferenceConstants {
     static let isLaunchingAtLogin = "isLaunchingAtLogin"
     static let isPausingAtLaunch = "isPausingAtLaunch"
     static let isSittingAtLaunch = "isSittingAtLaunch"

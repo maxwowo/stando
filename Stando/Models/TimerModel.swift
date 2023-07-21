@@ -8,7 +8,7 @@
 import SwiftUI
 
 class TimerModel: ObservableObject {
-    @AppStorage(SettingsConstants.isPausingAtLaunch) private var isPausingAtLaunch = false
+    @AppStorage(PreferenceConstants.isPausingAtLaunch) private var isPausingAtLaunch = false
 
     @Published var durationSeconds: Int
     @Published var isTimerRunning: Bool

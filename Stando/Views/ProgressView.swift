@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ProgressView: View {
-    @AppStorage(SettingsConstants.sitDurationSeconds) private var sitDurationSeconds = 900
-    @AppStorage(SettingsConstants.standDurationSeconds) private var standDurationSeconds = 2700
+    @AppStorage(PreferenceConstants.sitDurationSeconds) private var sitDurationSeconds = 900
+    @AppStorage(PreferenceConstants.standDurationSeconds) private var standDurationSeconds = 2700
 
     @EnvironmentObject private var timer: TimerModel
     @EnvironmentObject private var posture: PostureModel
