@@ -11,7 +11,7 @@ class TimerModel: ObservableObject {
     @Published var durationSeconds = 0
     
     private var timer: Timer?
-
+    
     init(durationSeconds: Int = 0, timer: Timer? = nil) {
         self.durationSeconds = durationSeconds
         self.timer = timer
@@ -34,7 +34,9 @@ class TimerModel: ObservableObject {
     
     func resetTimer() {
         stopTimer()
+        
         durationSeconds = 0
+        
         startTimer()
     }
 }

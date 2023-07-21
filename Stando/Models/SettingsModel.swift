@@ -26,7 +26,7 @@ class SettingsModel: ObservableObject {
         self.standDurationSeconds = standDurationSeconds
     }
     
-    func getDurationSeconds(isSitting: Bool) -> Int {
-        return isSitting ? sitDurationSeconds : standDurationSeconds
+    func getDurationSeconds(posture: Posture) -> Int {
+        return posture == Posture.sitting ? sitDurationSeconds : standDurationSeconds
     }
 }

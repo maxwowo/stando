@@ -13,7 +13,7 @@ struct CountdownView: View {
     @EnvironmentObject private var posture: PostureModel
     
     private var formattedRemainingTime: String {
-        let remainingDurationSeconds = settings.getDurationSeconds(isSitting: posture.isSitting) - timer.durationSeconds
+        let remainingDurationSeconds = settings.getDurationSeconds(posture: posture.posture) - timer.durationSeconds
         
         return String(format: "%02d:%02d", remainingDurationSeconds / 60, remainingDurationSeconds % 60)
     }

@@ -14,7 +14,7 @@ struct ProgressView: View {
     
     var body: some View {
         ZStack {
-            ProgressBarView(progress: Double(timer.durationSeconds) / Double(settings.getDurationSeconds(isSitting: posture.isSitting)))
+            ProgressBarView(progress: Double(timer.durationSeconds) / Double(settings.getDurationSeconds(posture: posture.posture)))
                 .frame(width: DimensionConstants.screenWidth, height: DimensionConstants.screenWidth)
             
             CountdownView()
