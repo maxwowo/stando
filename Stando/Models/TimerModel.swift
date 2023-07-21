@@ -19,7 +19,7 @@ class TimerModel: ObservableObject {
         self.durationSeconds = durationSeconds
         self.isTimerRunning = isTimerRunning
         self.timer = timer
-        
+
         if (!isPausingAtLaunch) {
             startTimer()
         }

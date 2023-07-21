@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct CountdownView: View {
-    @EnvironmentObject private var settings: SettingsModel
+    @AppStorage(SettingsConstants.sitDurationSeconds) private var sitDurationSeconds = 900
+    @AppStorage(SettingsConstants.standDurationSeconds) private var standDurationSeconds = 2700
+    
     @EnvironmentObject private var timer: TimerModel
     @EnvironmentObject private var posture: PostureModel
     
     private var formattedRemainingTime: String {
-        let remainingDurationSeconds = settings.getDurationSeconds(posture: posture.posture) - timer.durationSeconds
+        let remainingDurationSeconds = (posture.isSitting ? sitDurationSeconds : standDurationSeconds) - timer.durationSeconds
         
         return String(format: "%02d:%02d", remainingDurationSeconds / 60, remainingDurationSeconds % 60)
     }
@@ -32,7 +34,6 @@ struct CountdownView_Previews: PreviewProvider {
     static var previews: some View {
         CountdownView()
             .environmentObject(PostureModel(posture: Posture.sitting))
-            .environmentObject(SettingsModel())
             .environmentObject(TimerModel(durationSeconds: 123))
     }
 }

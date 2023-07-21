@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ControlsView: View {
-    @EnvironmentObject private var settings: SettingsModel
     @EnvironmentObject private var timer: TimerModel
     @EnvironmentObject private var posture: PostureModel
     
@@ -35,7 +34,6 @@ struct ControlsView_Previews: PreviewProvider {
     static var previews: some View {
         ControlsView()
             .environmentObject(PostureModel(posture: Posture.sitting))
-            .environmentObject(SettingsModel())
             .environmentObject(TimerModel(durationSeconds: 123))
     }
 }

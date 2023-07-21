@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct PopoverView: View {
-    @EnvironmentObject private var settings: SettingsModel
     @EnvironmentObject private var posture: PostureModel
     @EnvironmentObject private var metrics: MetricsModel
     @EnvironmentObject private var timer: TimerModel
@@ -31,6 +30,5 @@ struct PopoverView_Previews: PreviewProvider {
             .environmentObject(PostureModel(posture: Posture.sitting))
             .environmentObject(TimerModel(durationSeconds: 123))
             .environmentObject(MetricsModel(sitDurationSeconds: 396, standDurationSeconds: 4428, caloriesBurned: 195.5))
-            .environmentObject(SettingsModel())
     }
 }
