@@ -14,10 +14,10 @@ struct ControlsView: View {
     
     var body: some View {
         HStack(spacing: 12) {
-            HoverableSymbolButtonView(imageName: "pause") {
-                
+            HoverableSymbolButtonView(imageName: timer.isTimerRunning ? "pause" : "play") {
+                timer.isTimerRunning ? timer.stopTimer() : timer.resumeTimer()
             }
-            .help("Pause")
+            .help(timer.isTimerRunning ? "Pause" : "Resume")
             
             SymbolButtonView(imageName: "figure.stand", backgroundColor: Color.accentColor, foregroundColor: Color("primaryButtonForeground")) {
             }
