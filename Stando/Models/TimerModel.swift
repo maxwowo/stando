@@ -39,6 +39,10 @@ class TimerModel: ObservableObject {
             self?.durationSeconds += 1
         }
 
+        if let unwrappedTimer = timer {
+            RunLoop.main.add(unwrappedTimer, forMode: .common)
+        }
+
         isTimerRunning = true
     }
 
