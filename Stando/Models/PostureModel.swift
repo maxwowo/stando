@@ -13,6 +13,8 @@ enum Posture {
 }
 
 class PostureModel: ObservableObject {
+    @AppStorage(PreferenceConstants.isSittingAtLaunch) private var isSittingAtLaunch = true
+
     @Published var posture: Posture
 
     var isSitting: Bool {
@@ -21,5 +23,7 @@ class PostureModel: ObservableObject {
 
     init(posture: Posture = Posture.sitting) {
         self.posture = posture
+
+        self.posture = isSittingAtLaunch ? Posture.sitting : Posture.standing
     }
 }
