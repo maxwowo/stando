@@ -15,6 +15,8 @@ enum Posture {
 class MovementModel: ObservableObject {
     @AppStorage(PreferenceConstants.isSittingAtLaunch) private var isSittingAtLaunch = true
     @AppStorage(PreferenceConstants.isPausingAtLaunch) private var isPausingAtLaunch = false
+    @AppStorage(PreferenceConstants.sitDurationSeconds) private var sitDurationSeconds = 900
+    @AppStorage(PreferenceConstants.standDurationSeconds) private var standDurationSeconds = 2700
 
     @Published var posture: Posture
     @Published var durationSeconds: Int
@@ -57,6 +59,10 @@ class MovementModel: ObservableObject {
             .autoconnect()
             .sink { _ in
                 self.durationSeconds += 1
+
+                if self.durationSeconds == (self.isSitting ? self.sitDurationSeconds : self.standDurationSeconds) {
+                    self.next()
+                }
             }
 
         isPaused = false
@@ -80,5 +86,11 @@ class MovementModel: ObservableObject {
         durationSeconds = 0
 
         start()
+    }
+
+    func next() {
+        posture = isSitting ? Posture.standing : Posture.sitting
+
+        restart()
     }
 }

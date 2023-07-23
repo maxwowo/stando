@@ -18,12 +18,13 @@ struct ControlsView: View {
             .help(movement.isPaused ? "Resume" : "Pause")
 
             SymbolButtonView(
-                imageName: "figure.stand",
+                imageName: movement.isSitting ? "figure.stand" : "figure.seated.side",
                 backgroundColor: Color.accentColor,
                 foregroundColor: Color("primaryButtonForeground")
             ) {
+                movement.next()
             }
-            .help("Stand up")
+            .help(movement.isSitting ? "Stand up" : "Sit down")
 
             HoverableSymbolButtonView(imageName: "restart") {
                 movement.restart()
