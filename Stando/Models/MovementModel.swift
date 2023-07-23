@@ -26,7 +26,12 @@ class MovementModel: ObservableObject {
         posture == Posture.sitting
     }
 
-    init(posture: Posture = Posture.sitting, durationSeconds: Int = 0, isTimerRunning: Bool = false, timer: AnyCancellable? = nil) {
+    init(
+        posture: Posture = Posture.sitting,
+        durationSeconds: Int = 0,
+        isTimerRunning: Bool = false,
+        timer: AnyCancellable? = nil
+    ) {
         self.posture = posture
         self.durationSeconds = durationSeconds
         self.isTimerRunning = isTimerRunning

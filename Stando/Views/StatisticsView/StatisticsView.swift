@@ -19,29 +19,33 @@ struct StatisticsView: View {
     var body: some View {
         HStack(spacing: 12) {
             StatisticView(
-                metricName: "Sitting",
-                metricValue: "\(formatDurationHours(durationSeconds: statistics.sitDurationSeconds)) h"
+                name: "Sitting",
+                value: "\(formatDurationHours(durationSeconds: statistics.sitDurationSeconds)) h"
             )
 
             Divider()
                 .frame(height: 30)
 
             StatisticView(
-                metricName: "Standing",
-                metricValue: "\(formatDurationHours(durationSeconds: statistics.standDurationSeconds)) h"
+                name: "Standing",
+                value: "\(formatDurationHours(durationSeconds: statistics.standDurationSeconds)) h"
             )
 
             Divider()
                 .frame(height: 30)
 
-            StatisticView(metricName: "Calories", metricValue: String(statistics.caloriesBurned))
+            StatisticView(name: "Calories", value: String(statistics.caloriesBurned))
         }
     }
 }
 
-struct MetricsView_Previews: PreviewProvider {
+struct StatisticsView_Previews: PreviewProvider {
     static var previews: some View {
         StatisticsView()
-            .environmentObject(StatisticsModel(sitDurationSeconds: 396, standDurationSeconds: 4428, caloriesBurned: 195.5))
+            .environmentObject(StatisticsModel(
+                sitDurationSeconds: 396,
+                standDurationSeconds: 4428,
+                caloriesBurned: 195.5
+            ))
     }
 }

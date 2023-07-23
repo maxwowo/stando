@@ -8,22 +8,22 @@
 import SwiftUI
 
 struct StatisticView: View {
-    let metricName: String
-    let metricValue: String
+    let name: String
+    let value: String
 
     var body: some View {
         VStack {
-            Text(metricName)
+            Text(name)
                 .font(.caption)
                 .foregroundColor(Color.primary.opacity(0.5))
-            Text(metricValue)
+            Text(value)
                 .font(.title2)
         }
     }
 }
 
-struct MetricView_Previews: PreviewProvider {
+struct StatisticView_Previews: PreviewProvider {
     static var previews: some View {
-        StatisticView(metricName: "Calories", metricValue: "195.5")
+        StatisticView(name: "Calories", value: "195.5")
     }
 }
