@@ -11,15 +11,15 @@ struct ProgressView: View {
     @AppStorage(PreferenceConstants.sitDurationSeconds) private var sitDurationSeconds = 900
     @AppStorage(PreferenceConstants.standDurationSeconds) private var standDurationSeconds = 2700
 
-    @EnvironmentObject private var posture: PostureModel
+    @EnvironmentObject private var movement: MovementModel
 
     private var durationSeconds: Int {
-        posture.isSitting ? sitDurationSeconds : standDurationSeconds
+        movement.isSitting ? sitDurationSeconds : standDurationSeconds
     }
 
     var body: some View {
         ZStack {
-            ProgressBarView(progress: Double(posture.durationSeconds) / Double(durationSeconds))
+            ProgressBarView(progress: Double(movement.durationSeconds) / Double(durationSeconds))
                 .frame(width: DimensionConstants.screenWidth, height: DimensionConstants.screenWidth)
 
             CountdownView()
@@ -30,6 +30,6 @@ struct ProgressView: View {
 struct ProgressView_Previews: PreviewProvider {
     static var previews: some View {
         ProgressView()
-            .environmentObject(PostureModel(posture: Posture.sitting, durationSeconds: 123))
+            .environmentObject(MovementModel(posture: Posture.sitting, durationSeconds: 123))
     }
 }

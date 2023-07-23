@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MetricView: View {
+struct StatisticView: View {
     let metricName: String
     let metricValue: String
 
@@ -24,6 +24,6 @@ struct MetricView: View {
 
 struct MetricView_Previews: PreviewProvider {
     static var previews: some View {
-        MetricView(metricName: "Calories", metricValue: "195.5")
+        StatisticView(metricName: "Calories", metricValue: "195.5")
     }
 }

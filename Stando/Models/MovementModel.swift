@@ -12,7 +12,7 @@ enum Posture {
     case sitting, standing
 }
 
-class PostureModel: ObservableObject {
+class MovementModel: ObservableObject {
     @AppStorage(PreferenceConstants.isSittingAtLaunch) private var isSittingAtLaunch = true
     @AppStorage(PreferenceConstants.isPausingAtLaunch) private var isPausingAtLaunch = false
 

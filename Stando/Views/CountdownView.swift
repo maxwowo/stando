@@ -11,16 +11,16 @@ struct CountdownView: View {
     @AppStorage(PreferenceConstants.sitDurationSeconds) private var sitDurationSeconds = 900
     @AppStorage(PreferenceConstants.standDurationSeconds) private var standDurationSeconds = 2700
 
-    @EnvironmentObject private var posture: PostureModel
+    @EnvironmentObject private var movement: MovementModel
 
     private var postureIcon: String {
-        posture.isSitting ? "figure.seated.side" : "figure.stand"
+        movement.isSitting ? "figure.seated.side" : "figure.stand"
     }
 
     private var formattedRemainingTime: String {
-        let durationSeconds = posture.isSitting ? sitDurationSeconds : standDurationSeconds
+        let durationSeconds = movement.isSitting ? sitDurationSeconds : standDurationSeconds
 
-        let remainingDurationSeconds = durationSeconds - posture.durationSeconds
+        let remainingDurationSeconds = durationSeconds - movement.durationSeconds
 
         return String(format: "%02d:%02d", remainingDurationSeconds / 60, remainingDurationSeconds % 60)
     }
@@ -30,7 +30,7 @@ struct CountdownView: View {
             Text(formattedRemainingTime)
                 .font(.largeTitle)
                 .monospacedDigit()
-            Text("\(Image(postureIcon)) \(posture.isSitting ? "Sitting" : "Standing")")
+            Text("\(Image(postureIcon)) \(movement.isSitting ? "Sitting" : "Standing")")
         }
     }
 }
@@ -38,6 +38,6 @@ struct CountdownView: View {
 struct CountdownView_Previews: PreviewProvider {
     static var previews: some View {
         CountdownView()
-            .environmentObject(PostureModel(posture: Posture.sitting, durationSeconds: 123))
+            .environmentObject(MovementModel(posture: Posture.sitting, durationSeconds: 123))
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-class MetricsModel: ObservableObject {
+class StatisticsModel: ObservableObject {
     @Published var sitDurationSeconds: Int
     @Published var standDurationSeconds: Int
     @Published var caloriesBurned: Double
