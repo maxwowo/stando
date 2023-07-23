@@ -18,7 +18,7 @@ class MovementModel: ObservableObject {
 
     @Published var posture: Posture
     @Published var durationSeconds: Int
-    @Published var isTimerRunning: Bool
+    @Published var isPaused: Bool
 
     private var timer: AnyCancellable?
 
@@ -29,27 +29,27 @@ class MovementModel: ObservableObject {
     init(
         posture: Posture = Posture.sitting,
         durationSeconds: Int = 0,
-        isTimerRunning: Bool = false,
+        isPaused: Bool = true,
         timer: AnyCancellable? = nil
     ) {
         self.posture = posture
         self.durationSeconds = durationSeconds
-        self.isTimerRunning = isTimerRunning
+        self.isPaused = isPaused
         self.timer = timer
 
         self.posture = isSittingAtLaunch ? Posture.sitting : Posture.standing
 
         if !isPausingAtLaunch {
-            startTimer()
+            start()
         }
     }
 
     deinit {
-        stopTimer()
+        pause()
     }
 
-    func startTimer() {
-        guard !isTimerRunning else {
+    func start() {
+        guard isPaused else {
             return
         }
 
@@ -59,26 +59,26 @@ class MovementModel: ObservableObject {
                 self.durationSeconds += 1
             }
 
-        isTimerRunning = true
+        isPaused = false
     }
 
-    func stopTimer() {
+    func pause() {
         timer?.cancel()
 
         timer = nil
 
-        isTimerRunning = false
+        isPaused = true
     }
 
-    func resumeTimer() {
-        startTimer()
+    func resume() {
+        start()
     }
 
-    func resetTimer() {
-        stopTimer()
+    func restart() {
+        pause()
 
         durationSeconds = 0
 
-        startTimer()
+        start()
     }
 }

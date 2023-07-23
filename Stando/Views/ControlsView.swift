@@ -12,10 +12,10 @@ struct ControlsView: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            HoverableSymbolButtonView(imageName: movement.isTimerRunning ? "pause" : "play") {
-                movement.isTimerRunning ? movement.stopTimer() : movement.resumeTimer()
+            HoverableSymbolButtonView(imageName: movement.isPaused ? "play" : "pause") {
+                movement.isPaused ? movement.resume() : movement.pause()
             }
-            .help(movement.isTimerRunning ? "Pause" : "Resume")
+            .help(movement.isPaused ? "Resume" : "Pause")
 
             SymbolButtonView(
                 imageName: "figure.stand",
@@ -26,7 +26,7 @@ struct ControlsView: View {
             .help("Stand up")
 
             HoverableSymbolButtonView(imageName: "restart") {
-                movement.resetTimer()
+                movement.restart()
             }
             .help("Restart")
         }
