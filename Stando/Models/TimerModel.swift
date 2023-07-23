@@ -14,9 +14,9 @@ class TimerModel: ObservableObject {
     @Published var durationSeconds: Int
     @Published var isTimerRunning: Bool
 
-    private var timer: Timer?
+    private var timer: AnyCancellable?
 
-    init(durationSeconds: Int = 0, isTimerRunning: Bool = false, timer: Timer? = nil) {
+    init(durationSeconds: Int = 0, isTimerRunning: Bool = false, timer: AnyCancellable? = nil) {
         self.durationSeconds = durationSeconds
         self.isTimerRunning = isTimerRunning
         self.timer = timer
@@ -35,21 +35,17 @@ class TimerModel: ObservableObject {
             return
         }
 
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
-            self?.durationSeconds += 1
-        }
-
-        if let unwrappedTimer = timer {
-            // We need to add the timer to the RunLoop since otherwise when the gear icon is clicked and the menu
-            // opens, the timer would stop
-            RunLoop.main.add(unwrappedTimer, forMode: .common)
-        }
+        timer = Timer.publish(every: 1, on: .main, in: .common)
+            .autoconnect()
+            .sink { _ in
+                self.durationSeconds += 1
+            }
 
         isTimerRunning = true
     }
 
     func stopTimer() {
-        timer?.invalidate()
+        timer?.cancel()
 
         timer = nil
 
