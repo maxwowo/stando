@@ -11,7 +11,6 @@ struct CountdownView: View {
     @AppStorage(PreferenceConstants.sitDurationSeconds) private var sitDurationSeconds = 900
     @AppStorage(PreferenceConstants.standDurationSeconds) private var standDurationSeconds = 2700
 
-    @EnvironmentObject private var timer: TimerModel
     @EnvironmentObject private var posture: PostureModel
 
     private var postureIcon: String {
@@ -21,7 +20,7 @@ struct CountdownView: View {
     private var formattedRemainingTime: String {
         let durationSeconds = posture.isSitting ? sitDurationSeconds : standDurationSeconds
 
-        let remainingDurationSeconds = durationSeconds - timer.durationSeconds
+        let remainingDurationSeconds = durationSeconds - posture.durationSeconds
 
         return String(format: "%02d:%02d", remainingDurationSeconds / 60, remainingDurationSeconds % 60)
     }
@@ -39,7 +38,6 @@ struct CountdownView: View {
 struct CountdownView_Previews: PreviewProvider {
     static var previews: some View {
         CountdownView()
-            .environmentObject(PostureModel(posture: Posture.sitting))
-            .environmentObject(TimerModel(durationSeconds: 123))
+            .environmentObject(PostureModel(posture: Posture.sitting, durationSeconds: 123))
     }
 }

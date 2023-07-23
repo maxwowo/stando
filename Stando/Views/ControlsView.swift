@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct ControlsView: View {
-    @EnvironmentObject private var timer: TimerModel
     @EnvironmentObject private var posture: PostureModel
 
     var body: some View {
         HStack(spacing: 12) {
-            HoverableSymbolButtonView(imageName: timer.isTimerRunning ? "pause" : "play") {
-                timer.isTimerRunning ? timer.stopTimer() : timer.resumeTimer()
+            HoverableSymbolButtonView(imageName: posture.isTimerRunning ? "pause" : "play") {
+                posture.isTimerRunning ? posture.stopTimer() : posture.resumeTimer()
             }
-            .help(timer.isTimerRunning ? "Pause" : "Resume")
+            .help(posture.isTimerRunning ? "Pause" : "Resume")
 
             SymbolButtonView(
                 imageName: "figure.stand",
@@ -27,7 +26,7 @@ struct ControlsView: View {
             .help("Stand up")
 
             HoverableSymbolButtonView(imageName: "restart") {
-                timer.resetTimer()
+                posture.resetTimer()
             }
             .help("Restart")
         }
@@ -37,7 +36,6 @@ struct ControlsView: View {
 struct ControlsView_Previews: PreviewProvider {
     static var previews: some View {
         ControlsView()
-            .environmentObject(PostureModel(posture: Posture.sitting))
-            .environmentObject(TimerModel(durationSeconds: 123))
+            .environmentObject(PostureModel(posture: Posture.sitting, durationSeconds: 123))
     }
 }

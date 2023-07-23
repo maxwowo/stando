@@ -11,7 +11,6 @@ import SwiftUI
 struct StandoApp: App {
     @StateObject private var posture = PostureModel()
     @StateObject private var metrics = MetricsModel()
-    @StateObject private var timer = TimerModel()
 
     var body: some Scene {
         Settings {
@@ -22,7 +21,6 @@ struct StandoApp: App {
             PopoverView()
                 .environmentObject(posture)
                 .environmentObject(metrics)
-                .environmentObject(timer)
         }
         .menuBarExtraStyle(.window)
     }

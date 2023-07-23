@@ -10,7 +10,6 @@ import SwiftUI
 struct PopoverView: View {
     @EnvironmentObject private var posture: PostureModel
     @EnvironmentObject private var metrics: MetricsModel
-    @EnvironmentObject private var timer: TimerModel
 
     var body: some View {
         VStack(spacing: 24) {
@@ -27,8 +26,7 @@ struct PopoverView: View {
 struct PopoverView_Previews: PreviewProvider {
     static var previews: some View {
         PopoverView()
-            .environmentObject(PostureModel(posture: Posture.sitting))
-            .environmentObject(TimerModel(durationSeconds: 123))
+            .environmentObject(PostureModel(posture: Posture.sitting, durationSeconds: 123))
             .environmentObject(MetricsModel(sitDurationSeconds: 396, standDurationSeconds: 4428, caloriesBurned: 195.5))
     }
 }

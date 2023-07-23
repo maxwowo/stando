@@ -13,7 +13,6 @@
 		143D74B62A67CBB7006CD07E /* DimensionConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143D74B52A67CBB7006CD07E /* DimensionConstants.swift */; };
 		143D74BC2A67CF36006CD07E /* PostureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143D74BB2A67CF36006CD07E /* PostureModel.swift */; };
 		143D74BE2A67CFA1006CD07E /* MetricsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143D74BD2A67CFA1006CD07E /* MetricsModel.swift */; };
-		149CDB182A694CE00059E376 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149CDB172A694CE00059E376 /* TimerModel.swift */; };
 		149CF31E2A693A0900DB79D0 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149CF31D2A693A0900DB79D0 /* CountdownView.swift */; };
 		149CF3202A693DCD00DB79D0 /* MetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149CF31F2A693DCD00DB79D0 /* MetricsView.swift */; };
 		149CF3222A693E3300DB79D0 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149CF3212A693E3300DB79D0 /* HeaderView.swift */; };
@@ -55,7 +54,6 @@
 		143D74B52A67CBB7006CD07E /* DimensionConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimensionConstants.swift; sourceTree = "<group>"; };
 		143D74BB2A67CF36006CD07E /* PostureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostureModel.swift; sourceTree = "<group>"; };
 		143D74BD2A67CFA1006CD07E /* MetricsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsModel.swift; sourceTree = "<group>"; };
-		149CDB172A694CE00059E376 /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
 		149CF31D2A693A0900DB79D0 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		149CF31F2A693DCD00DB79D0 /* MetricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsView.swift; sourceTree = "<group>"; };
 		149CF3212A693E3300DB79D0 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 			children = (
 				143D74BB2A67CF36006CD07E /* PostureModel.swift */,
 				143D74BD2A67CFA1006CD07E /* MetricsModel.swift */,
-				149CDB172A694CE00059E376 /* TimerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -358,7 +355,6 @@
 				149CF31E2A693A0900DB79D0 /* CountdownView.swift in Sources */,
 				143D74B22A67A415006CD07E /* SymbolButtonView.swift in Sources */,
 				149CF3272A6943E900DB79D0 /* ProgressView.swift in Sources */,
-				149CDB182A694CE00059E376 /* TimerModel.swift in Sources */,
 				149CF3292A6944AB00DB79D0 /* ControlsView.swift in Sources */,
 				14DE798E2A61031E0090E61D /* StandoApp.swift in Sources */,
 			);
