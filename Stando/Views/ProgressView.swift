@@ -29,7 +29,16 @@ struct ProgressView: View {
 
 struct ProgressView_Previews: PreviewProvider {
     static var previews: some View {
+        let userDefaults: UserDefaults = {
+            let defaults = UserDefaults()
+
+            defaults.set(true, forKey: PreferenceConstants.isPausingAtLaunch)
+
+            return defaults
+        }()
+
         ProgressView()
             .environmentObject(MovementModel(posture: Posture.sitting, durationSeconds: 123))
+            .defaultAppStorage(userDefaults)
     }
 }

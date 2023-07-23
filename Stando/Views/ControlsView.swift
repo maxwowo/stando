@@ -36,7 +36,16 @@ struct ControlsView: View {
 
 struct ControlsView_Previews: PreviewProvider {
     static var previews: some View {
+        let userDefaults: UserDefaults = {
+            let defaults = UserDefaults()
+
+            defaults.set(true, forKey: PreferenceConstants.isPausingAtLaunch)
+
+            return defaults
+        }()
+
         ControlsView()
             .environmentObject(MovementModel(posture: Posture.sitting, durationSeconds: 123))
+            .defaultAppStorage(userDefaults)
     }
 }

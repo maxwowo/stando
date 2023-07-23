@@ -25,6 +25,14 @@ struct PopoverView: View {
 
 struct PopoverView_Previews: PreviewProvider {
     static var previews: some View {
+        let userDefaults: UserDefaults = {
+            let defaults = UserDefaults()
+
+            defaults.set(true, forKey: PreferenceConstants.isPausingAtLaunch)
+
+            return defaults
+        }()
+
         PopoverView()
             .environmentObject(MovementModel(posture: Posture.sitting, durationSeconds: 123))
             .environmentObject(StatisticsModel(
@@ -32,5 +40,6 @@ struct PopoverView_Previews: PreviewProvider {
                 standDurationSeconds: 4428,
                 caloriesBurned: 195.5
             ))
+            .defaultAppStorage(userDefaults)
     }
 }
