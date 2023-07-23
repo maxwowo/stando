@@ -40,6 +40,8 @@ class TimerModel: ObservableObject {
         }
 
         if let unwrappedTimer = timer {
+            // We need to add the timer to the RunLoop since otherwise when the gear icon is clicked and the menu
+            // opens, the timer would stop
             RunLoop.main.add(unwrappedTimer, forMode: .common)
         }
 
