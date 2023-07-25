@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ProgressView: View {
-    @AppStorage(PreferenceConstants.sitDurationSeconds) private var sitDurationSeconds = 900
-    @AppStorage(PreferenceConstants.standDurationSeconds) private var standDurationSeconds = 2700
+    @AppStorage(SettingConstants.sitDurationSeconds) private var sitDurationSeconds = 900
+    @AppStorage(SettingConstants.standDurationSeconds) private var standDurationSeconds = 2700
 
     @EnvironmentObject private var movement: MovementModel
 
@@ -32,7 +32,7 @@ struct ProgressView_Previews: PreviewProvider {
         let userDefaults: UserDefaults = {
             let defaults = UserDefaults()
 
-            defaults.set(true, forKey: PreferenceConstants.isPausingAtLaunch)
+            defaults.set(true, forKey: SettingConstants.isPausingAtLaunch)
 
             return defaults
         }()

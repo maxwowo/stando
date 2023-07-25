@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PreferenceConstants {
+struct SettingConstants {
     static let isLaunchingAtLogin = "isLaunchingAtLogin"
     static let isPausingAtLaunch = "isPausingAtLaunch"
     static let isSittingAtLaunch = "isSittingAtLaunch"

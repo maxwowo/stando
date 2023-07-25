@@ -28,7 +28,7 @@ struct PopoverView_Previews: PreviewProvider {
         let userDefaults: UserDefaults = {
             let defaults = UserDefaults()
 
-            defaults.set(true, forKey: PreferenceConstants.isPausingAtLaunch)
+            defaults.set(true, forKey: SettingConstants.isPausingAtLaunch)
 
             return defaults
         }()

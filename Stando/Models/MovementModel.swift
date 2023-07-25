@@ -13,10 +13,10 @@ enum Posture {
 }
 
 class MovementModel: ObservableObject {
-    @AppStorage(PreferenceConstants.isSittingAtLaunch) private var isSittingAtLaunch = true
-    @AppStorage(PreferenceConstants.isPausingAtLaunch) private var isPausingAtLaunch = false
-    @AppStorage(PreferenceConstants.sitDurationSeconds) private var sitDurationSeconds = 900
-    @AppStorage(PreferenceConstants.standDurationSeconds) private var standDurationSeconds = 2700
+    @AppStorage(SettingConstants.isSittingAtLaunch) private var isSittingAtLaunch = true
+    @AppStorage(SettingConstants.isPausingAtLaunch) private var isPausingAtLaunch = false
+    @AppStorage(SettingConstants.sitDurationSeconds) private var sitDurationSeconds = 900
+    @AppStorage(SettingConstants.standDurationSeconds) private var standDurationSeconds = 2700
 
     @Published var posture: Posture
     @Published var durationSeconds: Int
