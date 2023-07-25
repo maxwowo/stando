@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct PreferencesView: View {
+struct SettingsView: View {
     var body: some View {
         Text("Preferences")
             .frame(width: 200, height: 200)
     }
 }
 
-struct PreferencesView_Previews: PreviewProvider {
+struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        PreferencesView()
+        SettingsView()
     }
 }

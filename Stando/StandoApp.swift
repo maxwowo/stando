@@ -14,7 +14,7 @@ struct StandoApp: App {
 
     var body: some Scene {
         Settings {
-            PreferencesView()
+            SettingsView()
         }
 
         MenuBarExtra("Stando", image: movement.isSitting ? "figure.seated.side" : "figure.stand") {
