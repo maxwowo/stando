@@ -19,13 +19,13 @@ struct HeaderView: View {
             HStack {
                 Spacer()
 
+                // TODO: figure out a way to make the button dim when clicked just like the other image buttons
                 Menu {
                     Button("Preferences") {
                         NSApplication.shared.activate(ignoringOtherApps: true)
 
-                        // macOS 13+ renamed the action name
+                        // macOS 13+ renamed the action name ¯\_(ツ)_/¯
                         if #available(macOS 13, *) {
-                            print("available")
                             NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
                         } else {
                             NSApp.sendAction(Selector(("showPreferencesWindow:")), to: nil, from: nil)
