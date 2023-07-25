@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct StatisticsView: View {
-    @EnvironmentObject private var statistics: StatisticsModel
+struct SessionView: View {
+    @EnvironmentObject private var session: SessionModel
 
     func formatDurationHours(durationSeconds: Int) -> String {
         let hours = Double(durationSeconds) / 3600
@@ -18,31 +18,31 @@ struct StatisticsView: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            StatisticView(
+            SessionMetricView(
                 name: "Sitting",
-                value: "\(formatDurationHours(durationSeconds: statistics.sitDurationSeconds)) h"
+                value: "\(formatDurationHours(durationSeconds: session.sitDurationSeconds)) h"
             )
 
             Divider()
                 .frame(height: 30)
 
-            StatisticView(
+            SessionMetricView(
                 name: "Standing",
-                value: "\(formatDurationHours(durationSeconds: statistics.standDurationSeconds)) h"
+                value: "\(formatDurationHours(durationSeconds: session.standDurationSeconds)) h"
             )
 
             Divider()
                 .frame(height: 30)
 
-            StatisticView(name: "Calories", value: String(statistics.caloriesBurned))
+            SessionMetricView(name: "Calories", value: String(session.caloriesBurned))
         }
     }
 }
 
-struct StatisticsView_Previews: PreviewProvider {
+struct SessionView_Previews: PreviewProvider {
     static var previews: some View {
-        StatisticsView()
-            .environmentObject(StatisticsModel(
+        SessionView()
+            .environmentObject(SessionModel(
                 sitDurationSeconds: 396,
                 standDurationSeconds: 4428,
                 caloriesBurned: 195.5
