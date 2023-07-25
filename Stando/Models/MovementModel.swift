@@ -21,6 +21,8 @@ class MovementModel: ObservableObject {
     @Published var posture: Posture
     @Published var durationSeconds: Int
     @Published var isPaused: Bool
+    @Published var totalSitDurationSeconds: Int
+    @Published var totalStandDurationSeconds: Int
 
     private var timer: AnyCancellable?
 
@@ -32,12 +34,16 @@ class MovementModel: ObservableObject {
         posture: Posture = Posture.sitting,
         durationSeconds: Int = 0,
         isPaused: Bool = true,
-        timer: AnyCancellable? = nil
+        timer: AnyCancellable? = nil,
+        totalSitDurationSeconds: Int = 0,
+        totalStandDurationSeconds: Int = 0
     ) {
         self.posture = posture
         self.durationSeconds = durationSeconds
         self.isPaused = isPaused
         self.timer = timer
+        self.totalSitDurationSeconds = totalSitDurationSeconds
+        self.totalStandDurationSeconds = totalStandDurationSeconds
 
         self.posture = isSittingAtLaunch ? Posture.sitting : Posture.standing
 
@@ -59,6 +65,12 @@ class MovementModel: ObservableObject {
             .autoconnect()
             .sink { _ in
                 self.durationSeconds += 1
+
+                if self.isSitting {
+                    self.totalSitDurationSeconds += 1
+                } else {
+                    self.totalStandDurationSeconds += 1
+                }
 
                 if self.durationSeconds >= (self.isSitting ? self.sitDurationSeconds : self.standDurationSeconds) {
                     self.next()
