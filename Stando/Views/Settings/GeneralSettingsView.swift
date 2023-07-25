@@ -11,7 +11,7 @@ struct GeneralSettingsView: View {
     @AppStorage(SettingConstants.isLaunchingAtLogin) private var isLaunchingAtLogin = true
     @AppStorage(SettingConstants.isPausingAtLaunch) private var isPausingAtLaunch = false
     @AppStorage(SettingConstants.isSittingAtLaunch) private var isSittingAtLaunch = true
-    @AppStorage(SettingConstants.isPausingAtEndOfSet) private var isPausingAtEndOfSet = false
+    @AppStorage(SettingConstants.isPausingAtEndOfMovement) private var isPausingAtEndOfMovement = false
     @AppStorage(SettingConstants.sitDurationSeconds) private var sitDurationSeconds = 900
     @AppStorage(SettingConstants.standDurationSeconds) private var standDurationSeconds = 2700
 
@@ -20,7 +20,7 @@ struct GeneralSettingsView: View {
             Toggle("Launch at login", isOn: $isLaunchingAtLogin)
             Toggle("Pause at launch", isOn: $isPausingAtLaunch)
             Toggle("Sit at launch", isOn: $isSittingAtLaunch)
-            Toggle("Pause at end of set", isOn: $isPausingAtEndOfSet)
+            Toggle("Pause at end of movement", isOn: $isPausingAtEndOfMovement)
 
             Divider()
 
