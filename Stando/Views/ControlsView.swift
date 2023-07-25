@@ -12,12 +12,12 @@ struct ControlsView: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            HoverableSymbolButtonView(imageName: movement.isPaused ? "play" : "pause") {
+            HoverableImageButtonView(imageName: movement.isPaused ? "play" : "pause") {
                 movement.isPaused ? movement.resume() : movement.pause()
             }
             .help(movement.isPaused ? "Resume" : "Pause")
 
-            SymbolButtonView(
+            ImageButtonView(
                 imageName: movement.isSitting ? "figure.stand" : "figure.seated.side",
                 backgroundColor: Color.accentColor,
                 foregroundColor: Color("primaryButtonForeground")
@@ -26,7 +26,7 @@ struct ControlsView: View {
             }
             .help(movement.isSitting ? "Stand up" : "Sit down")
 
-            HoverableSymbolButtonView(imageName: "restart") {
+            HoverableImageButtonView(imageName: "restart") {
                 movement.restart()
             }
             .help("Restart")

@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct HoverableSymbolButtonView: View {
+struct HoverableImageButtonView: View {
     let imageName: String
     let action: () -> Void
 
     @State private var isHovered = false
 
     var body: some View {
-        SymbolButtonView(
+        ImageButtonView(
             imageName: imageName,
             backgroundColor: isHovered ? Color.primary.opacity(0.1) : Color.clear,
             foregroundColor: Color.primary,
@@ -26,9 +26,9 @@ struct HoverableSymbolButtonView: View {
     }
 }
 
-struct HoverableSymbolButtonView_Previews: PreviewProvider {
+struct HoverableImageButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        HoverableSymbolButtonView(imageName: "figure.stand") {
+        HoverableImageButtonView(imageName: "figure.stand") {
             print("Button clicked")
         }
     }

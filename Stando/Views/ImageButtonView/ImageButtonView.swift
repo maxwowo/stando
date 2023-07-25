@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SymbolButtonView: View {
+struct ImageButtonView: View {
     let imageName: String
     let backgroundColor: Color
     let foregroundColor: Color
@@ -26,17 +26,17 @@ struct SymbolButtonView: View {
     }
 }
 
-struct SymbolButtonView_Previews: PreviewProvider {
+struct ImageButtonView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            SymbolButtonView(
+            ImageButtonView(
                 imageName: "figure.stand",
                 backgroundColor: Color.accentColor,
                 foregroundColor: Color.primary
             ) {
                 print("Button clicked")
             }
-            SymbolButtonView(
+            ImageButtonView(
                 imageName: "figure.stand",
                 backgroundColor: Color.indigo,
                 foregroundColor: Color.primary
