@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PopoverView: View {
     @EnvironmentObject private var movement: MovementModel
-    @EnvironmentObject private var session: SessionModel
 
     var body: some View {
         VStack(spacing: 24) {
@@ -35,11 +34,6 @@ struct PopoverView_Previews: PreviewProvider {
 
         PopoverView()
             .environmentObject(MovementModel(posture: Posture.sitting, durationSeconds: 123))
-            .environmentObject(SessionModel(
-                sitDurationSeconds: 396,
-                standDurationSeconds: 4428,
-                caloriesBurned: 195.5
-            ))
             .defaultAppStorage(userDefaults)
     }
 }
