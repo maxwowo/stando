@@ -21,7 +21,15 @@ struct HeaderView: View {
 
                 Menu {
                     Button("Preferences") {
-                        print("pref clicked")
+                        NSApplication.shared.activate(ignoringOtherApps: true)
+
+                        // macOS 13+ renamed the action name
+                        if #available(macOS 13, *) {
+                            print("available")
+                            NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
+                        } else {
+                            NSApp.sendAction(Selector(("showPreferencesWindow:")), to: nil, from: nil)
+                        }
                     }
 
                     Divider()
