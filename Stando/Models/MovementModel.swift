@@ -60,7 +60,7 @@ class MovementModel: ObservableObject {
             .sink { _ in
                 self.durationSeconds += 1
 
-                if self.durationSeconds == (self.isSitting ? self.sitDurationSeconds : self.standDurationSeconds) {
+                if self.durationSeconds >= (self.isSitting ? self.sitDurationSeconds : self.standDurationSeconds) {
                     self.next()
                 }
             }

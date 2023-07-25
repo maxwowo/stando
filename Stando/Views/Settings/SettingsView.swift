@@ -9,8 +9,13 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
-        Text("Preferences")
-            .frame(width: 200, height: 200)
+        TabView {
+            GeneralSettingsView()
+                .tabItem {
+                    Label("General", systemImage: "gear")
+                }
+        }
+        .padding()
     }
 }
 
