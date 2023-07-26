@@ -8,17 +8,22 @@
 import SwiftUI
 
 struct DurationPickerView: View {
-    @State private var hours: Int = 0
-    @State private var minutes: Int = 15
-    @State private var seconds: Int = 0
-
     @Binding var durationSeconds: Int
+
+    private var hours: Int {
+        durationSeconds / 3600
+    }
+
+    private var minutes: Int {
+        (durationSeconds % 3600) / 60
+    }
+
+    private var seconds: Int {
+        durationSeconds % 60
+    }
 
     init(durationSeconds: Binding<Int>) {
         self._durationSeconds = durationSeconds
-        self.hours = self.durationSeconds / 3600
-        self.minutes = (self.durationSeconds % 3600) / 60
-        self.seconds = self.durationSeconds % 60
     }
 
     func updateDurationSeconds() {
@@ -27,25 +32,39 @@ struct DurationPickerView: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            Stepper(value: $hours, in: minutes == 0 && seconds == 0 ? 1...9 : 0...60) {
+            Stepper {
                 Text("\(hours) hours")
-            } onEditingChanged: { isEditing in
-                if isEditing {
-                    updateDurationSeconds()
+            } onIncrement: {
+                if hours < 9 {
+                    durationSeconds += 3600
+                }
+            } onDecrement: {
+                if durationSeconds > 3600 {
+                    durationSeconds -= 3600
                 }
             }
-            Stepper(value: $minutes, in: hours == 0 && seconds == 0 ? 1...59 : 0...59) {
+
+            Stepper {
                 Text("\(minutes) min.")
-            } onEditingChanged: { isEditing in
-                if isEditing {
-                    updateDurationSeconds()
+            } onIncrement: {
+                if minutes < 59 {
+                    durationSeconds += 60
+                }
+            } onDecrement: {
+                if durationSeconds > 60 {
+                    durationSeconds -= 60
                 }
             }
-            Stepper(value: $seconds, in: hours == 0 && minutes == 0 ? 1...59 : 0...59) {
+
+            Stepper {
                 Text("\(seconds) sec.")
-            } onEditingChanged: { isEditing in
-                if isEditing {
-                    updateDurationSeconds()
+            } onIncrement: {
+                if seconds < 59 {
+                    durationSeconds += 1
+                }
+            } onDecrement: {
+                if durationSeconds > 1 {
+                    durationSeconds -= 1
                 }
             }
         }
