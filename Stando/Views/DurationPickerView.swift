@@ -1,0 +1,28 @@
+//
+//  DurationPickerView.swift
+//  Stando
+//
+//  Created by Max Wo on 25/7/2023.
+//
+
+import SwiftUI
+
+struct DurationPickerView: View {
+    @Binding var hours: Int
+    @Binding var minutes: Int
+    @Binding var seconds: Int
+
+    var body: some View {
+        HStack(spacing: 10) {
+            Stepper("\(hours) hours", value: $hours, in: 0...60)
+            Stepper("\(minutes) min.", value: $minutes, in: 0...59)
+            Stepper("\(seconds) sec.", value: $seconds, in: 0...59)
+        }
+    }
+}
+
+struct DurationPickerView_Previews: PreviewProvider {
+    static var previews: some View {
+        DurationPickerView(hours: .constant(0), minutes: .constant(15), seconds: .constant(21))
+    }
+}

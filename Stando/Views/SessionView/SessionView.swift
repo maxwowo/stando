@@ -50,6 +50,11 @@ struct SessionView: View {
 struct SessionView_Previews: PreviewProvider {
     static var previews: some View {
         SessionView()
-            .environmentObject(MovementModel(posture: Posture.sitting, durationSeconds: 123, totalSitDurationSeconds: 123, totalStandDurationSeconds: 123))
+            .environmentObject(MovementModel(
+                posture: Posture.sitting,
+                durationSeconds: 123,
+                totalSitDurationSeconds: 123,
+                totalStandDurationSeconds: 123
+            ))
     }
 }

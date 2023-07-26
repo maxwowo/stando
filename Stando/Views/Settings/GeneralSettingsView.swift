@@ -22,17 +22,15 @@ struct GeneralSettingsView: View {
             Toggle("Sit at launch", isOn: $isSittingAtLaunch)
             Toggle("Pause at end of movement", isOn: $isPausingAtEndOfMovement)
 
-            Divider()
+            HStack {
+                Text("Sit duration")
+                DurationPickerView(hours: .constant(0), minutes: .constant(15), seconds: .constant(0))
+            }
 
-            Text("Sit duration (seconds)")
-                .font(.headline)
-            TextField("Sit duration", value: $sitDurationSeconds, format: .number)
-                .textFieldStyle(.roundedBorder)
-
-            Text("Stand duration (seconds)")
-                .font(.headline)
-            TextField("Stand duration", value: $standDurationSeconds, format: .number)
-                .textFieldStyle(.roundedBorder)
+            HStack {
+                Text("Stand duration")
+                DurationPickerView(hours: .constant(0), minutes: .constant(15), seconds: .constant(0))
+            }
         }
     }
 }
