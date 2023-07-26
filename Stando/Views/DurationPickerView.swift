@@ -13,10 +13,10 @@ struct DurationPickerView: View {
     @Binding var seconds: Int
 
     var body: some View {
-        HStack(spacing: 10) {
-            Stepper("\(hours) hours", value: $hours, in: 0...60)
-            Stepper("\(minutes) min.", value: $minutes, in: 0...59)
-            Stepper("\(seconds) sec.", value: $seconds, in: 0...59)
+        HStack(spacing: 12) {
+            Stepper("\(hours) hours", value: $hours, in: minutes == 0 && seconds == 0 ? 1...60 : 0...60)
+            Stepper("\(minutes) min.", value: $minutes, in: hours == 0 && seconds == 0 ? 1...59 : 0...59)
+            Stepper("\(seconds) sec.", value: $seconds, in: hours == 0 && minutes == 0 ? 1...59 : 0...59)
         }
     }
 }
