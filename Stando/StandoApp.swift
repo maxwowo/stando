@@ -6,10 +6,21 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 @main
 struct StandoApp: App {
     @StateObject private var movement = MovementModel()
+
+    init() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+            if success {
+                print("All set!")
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+    }
 
     var body: some Scene {
         Settings {

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import UserNotifications
 
 enum Posture {
     case sitting, standing
@@ -55,6 +56,28 @@ class MovementModel: ObservableObject {
 
     deinit {
         pause()
+    }
+
+    func sendMovementNotification() {
+        let content = UNMutableNotificationContent()
+
+        content.title = "It's time to \(isSitting ? "sit down" : "stand up")!"
+
+        if isSitting {
+            content.subtitle = "Find a comfy spot to sit down and give your legs a well-deserved break. Take a few "
+            + "deep breaths and relax your mind."
+        } else {
+            content.subtitle = "Why not stand up and stretch those legs? A quick walk around the room can do wonders "
+            + "for your energy and focus."
+        }
+
+        content.sound = UNNotificationSound.default
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0, repeats: false)
+
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+
+        UNUserNotificationCenter.current().add(request)
     }
 
     func start() {
@@ -107,5 +130,7 @@ class MovementModel: ObservableObject {
         posture = isSitting ? Posture.standing : Posture.sitting
 
         restart(isPausing: isPausingAtEndOfMovement)
+
+        sendMovementNotification()
     }
 }
