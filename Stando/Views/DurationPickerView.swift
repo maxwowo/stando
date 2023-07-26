@@ -18,7 +18,6 @@ struct DurationPickerView: View {
         self._durationSeconds = durationSeconds
         self.hours = self.durationSeconds / 3600
         self.minutes = (self.durationSeconds % 3600) / 60
-        print(self._durationSeconds)
         self.seconds = self.durationSeconds % 60
     }
 
