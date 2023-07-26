@@ -15,21 +15,37 @@ struct GeneralSettingsView: View {
     @AppStorage(SettingConstants.sitDurationSeconds) private var sitDurationSeconds = 900
     @AppStorage(SettingConstants.standDurationSeconds) private var standDurationSeconds = 2700
 
+    private let frameHeight: Double = 20
+
     var body: some View {
-        VStack(alignment: .leading) {
-            Toggle("Launch at login", isOn: $isLaunchingAtLogin)
-            Toggle("Pause at launch", isOn: $isPausingAtLaunch)
-            Toggle("Sit at launch", isOn: $isSittingAtLaunch)
-            Toggle("Pause at end of movement", isOn: $isPausingAtEndOfMovement)
-
-            HStack {
+        HStack(alignment: .top) {
+            VStack(alignment: .trailing) {
+                Text("Auto-start")
+                    .frame(height: frameHeight)
+                Text("Auto-play")
+                    .frame(height: frameHeight)
+                Text("Default posture")
+                    .frame(height: frameHeight)
+                Text("Take a break")
+                    .frame(height: frameHeight)
                 Text("Sit duration")
-                DurationPickerView(hours: .constant(0), minutes: .constant(15), seconds: .constant(0))
-            }
-
-            HStack {
+                    .frame(height: frameHeight)
                 Text("Stand duration")
+                    .frame(height: frameHeight)
+            }
+            VStack(alignment: .leading) {
+                Toggle("Launch at login", isOn: $isLaunchingAtLogin)
+                    .frame(height: frameHeight)
+                Toggle("Pause at launch", isOn: $isPausingAtLaunch)
+                    .frame(height: frameHeight)
+                Toggle("Sit at launch", isOn: $isSittingAtLaunch)
+                    .frame(height: frameHeight)
+                Toggle("Pause after each movement", isOn: $isPausingAtEndOfMovement)
+                    .frame(height: frameHeight)
                 DurationPickerView(hours: .constant(0), minutes: .constant(15), seconds: .constant(0))
+                    .frame(height: frameHeight)
+                DurationPickerView(hours: .constant(0), minutes: .constant(15), seconds: .constant(0))
+                    .frame(height: frameHeight)
             }
         }
     }

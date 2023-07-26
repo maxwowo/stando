@@ -14,6 +14,7 @@ struct SettingsView: View {
                 .tabItem {
                     Label("General", systemImage: "gear")
                 }
+                .frame(width: 350)
         }
         .padding()
     }
