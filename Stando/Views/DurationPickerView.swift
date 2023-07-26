@@ -34,7 +34,6 @@ struct DurationPickerView: View {
         HStack {
             Stepper {
                 Text("\(hours) hours")
-                    .frame(width: 60, alignment: .trailing)
             } onIncrement: {
                 if hours < 9 {
                     durationSeconds += 3600
@@ -47,7 +46,7 @@ struct DurationPickerView: View {
 
             Stepper {
                 Text("\(minutes) min.")
-                    .frame(width: 60, alignment: .trailing)
+                    .frame(width: 50, alignment: .trailing)
             } onIncrement: {
                 if minutes < 59 {
                     durationSeconds += 60
@@ -60,7 +59,7 @@ struct DurationPickerView: View {
 
             Stepper {
                 Text("\(seconds) sec.")
-                    .frame(width: 60, alignment: .trailing)
+                    .frame(width: 50, alignment: .trailing)
             } onIncrement: {
                 if seconds < 59 {
                     durationSeconds += 1
@@ -71,7 +70,7 @@ struct DurationPickerView: View {
                 }
             }
         }
-        .padding(.leading, 16)
+        .padding(.leading, 20)
         .background(.background)
         .cornerRadius(4)
     }
