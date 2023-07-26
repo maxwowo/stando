@@ -42,9 +42,9 @@ struct GeneralSettingsView: View {
                     .frame(height: frameHeight)
                 Toggle("Pause after each movement", isOn: $isPausingAtEndOfMovement)
                     .frame(height: frameHeight)
-                DurationPickerView(hours: .constant(0), minutes: .constant(15), seconds: .constant(0))
+                DurationPickerView(durationSeconds: $sitDurationSeconds)
                     .frame(height: frameHeight)
-                DurationPickerView(hours: .constant(0), minutes: .constant(15), seconds: .constant(0))
+                DurationPickerView(durationSeconds: $standDurationSeconds)
                     .frame(height: frameHeight)
             }
         }
