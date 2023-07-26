@@ -12,6 +12,7 @@ struct GeneralSettingsView: View {
     @AppStorage(SettingConstants.isPausingAtLaunch) private var isPausingAtLaunch = false
     @AppStorage(SettingConstants.isSittingAtLaunch) private var isSittingAtLaunch = true
     @AppStorage(SettingConstants.isPausingAtEndOfMovement) private var isPausingAtEndOfMovement = false
+    @AppStorage(SettingConstants.isSendingMovementNotifications) private var isSendingMovementNotifications = true
     @AppStorage(SettingConstants.sitDurationSeconds) private var sitDurationSeconds = 900
     @AppStorage(SettingConstants.standDurationSeconds) private var standDurationSeconds = 2700
 
@@ -28,6 +29,8 @@ struct GeneralSettingsView: View {
                     .frame(height: frameHeight)
                 Text("Take a break")
                     .frame(height: frameHeight)
+                Text("Be notified")
+                    .frame(height: frameHeight)
                 Text("Sit duration")
                     .frame(height: frameHeight)
                 Text("Stand duration")
@@ -42,6 +45,7 @@ struct GeneralSettingsView: View {
                     .frame(height: frameHeight)
                 Toggle("Pause after each movement", isOn: $isPausingAtEndOfMovement)
                     .frame(height: frameHeight)
+                Toggle("Send notifications to sit / stand", isOn: $isSendingMovementNotifications)
                 DurationPickerView(durationSeconds: $sitDurationSeconds)
                     .frame(height: frameHeight)
                 DurationPickerView(durationSeconds: $standDurationSeconds)

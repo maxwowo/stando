@@ -17,6 +17,7 @@ class MovementModel: ObservableObject {
     @AppStorage(SettingConstants.isSittingAtLaunch) private var isSittingAtLaunch = true
     @AppStorage(SettingConstants.isPausingAtLaunch) private var isPausingAtLaunch = false
     @AppStorage(SettingConstants.isPausingAtEndOfMovement) private var isPausingAtEndOfMovement = false
+    @AppStorage(SettingConstants.isSendingMovementNotifications) private var isSendingMovementNotifications = true
     @AppStorage(SettingConstants.sitDurationSeconds) private var sitDurationSeconds = 900
     @AppStorage(SettingConstants.standDurationSeconds) private var standDurationSeconds = 2700
 
@@ -131,6 +132,8 @@ class MovementModel: ObservableObject {
 
         restart(isPausing: isPausingAtEndOfMovement)
 
-        sendMovementNotification()
+        if isSendingMovementNotifications {
+            sendMovementNotification()
+        }
     }
 }
