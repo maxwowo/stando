@@ -30,17 +30,47 @@ struct DurationPickerView: View {
         durationSeconds = hours * 3600 + minutes * 60 + seconds
     }
 
+    func incrementHour() {
+        durationSeconds += 3600
+    }
+
+    func decrementHour() {
+        durationSeconds -= 3600
+    }
+
+    func incrementMinute() {
+        durationSeconds += 60
+    }
+
+    func decrementMinute() {
+        durationSeconds -= 60
+    }
+
+    func incrementSecond() {
+        durationSeconds += 1
+    }
+
+    func decrementSecond() {
+        durationSeconds -= 1
+    }
+
     var body: some View {
         HStack {
             Stepper {
                 Text("\(hours) hours")
             } onIncrement: {
                 if hours < 9 {
-                    durationSeconds += 3600
+                    incrementHour()
                 }
             } onDecrement: {
-                if durationSeconds > 3600 {
-                    durationSeconds -= 3600
+                if minutes == 0 && seconds == 0 {
+                    if hours > 1 {
+                        decrementHour()
+                    }
+                } else {
+                    if hours > 0 {
+                        decrementHour()
+                    }
                 }
             }
 
@@ -49,11 +79,17 @@ struct DurationPickerView: View {
                     .frame(width: 50, alignment: .trailing)
             } onIncrement: {
                 if minutes < 59 {
-                    durationSeconds += 60
+                    incrementMinute()
                 }
             } onDecrement: {
-                if durationSeconds > 60 {
-                    durationSeconds -= 60
+                if hours == 0 && seconds == 0 {
+                    if minutes > 1 {
+                        decrementMinute()
+                    }
+                } else {
+                    if minutes > 0 {
+                        decrementMinute()
+                    }
                 }
             }
 
@@ -62,11 +98,17 @@ struct DurationPickerView: View {
                     .frame(width: 50, alignment: .trailing)
             } onIncrement: {
                 if seconds < 59 {
-                    durationSeconds += 1
+                    incrementSecond()
                 }
             } onDecrement: {
-                if durationSeconds > 1 {
-                    durationSeconds -= 1
+                if hours == 0 && minutes == 0 {
+                    if seconds > 1 {
+                        decrementSecond()
+                    }
+                } else {
+                    if seconds > 0 {
+                        decrementSecond()
+                    }
                 }
             }
         }
