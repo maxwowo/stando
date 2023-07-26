@@ -15,6 +15,7 @@ enum Posture {
 class MovementModel: ObservableObject {
     @AppStorage(SettingConstants.isSittingAtLaunch) private var isSittingAtLaunch = true
     @AppStorage(SettingConstants.isPausingAtLaunch) private var isPausingAtLaunch = false
+    @AppStorage(SettingConstants.isPausingAtEndOfMovement) private var isPausingAtEndOfMovement = false
     @AppStorage(SettingConstants.sitDurationSeconds) private var sitDurationSeconds = 900
     @AppStorage(SettingConstants.standDurationSeconds) private var standDurationSeconds = 2700
 
@@ -92,17 +93,19 @@ class MovementModel: ObservableObject {
         start()
     }
 
-    func restart() {
+    func restart(isPausing: Bool = true) {
         pause()
 
         durationSeconds = 0
 
-        start()
+        if !isPausing {
+            start()
+        }
     }
 
     func next() {
         posture = isSitting ? Posture.standing : Posture.sitting
 
-        restart()
+        restart(isPausing: isPausingAtEndOfMovement)
     }
 }
