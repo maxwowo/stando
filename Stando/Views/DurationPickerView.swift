@@ -18,6 +18,9 @@ struct DurationPickerView: View {
             Stepper("\(minutes) min.", value: $minutes, in: hours == 0 && seconds == 0 ? 1...59 : 0...59)
             Stepper("\(seconds) sec.", value: $seconds, in: hours == 0 && minutes == 0 ? 1...59 : 0...59)
         }
+        .padding(.leading, 12)
+        .background(.background)
+        .cornerRadius(4)
     }
 }
 
