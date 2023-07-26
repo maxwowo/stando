@@ -117,7 +117,7 @@ class MovementModel: ObservableObject {
         start()
     }
 
-    func restart(isPausing: Bool = true) {
+    func restart(isPausing: Bool = false) {
         pause()
 
         durationSeconds = 0
