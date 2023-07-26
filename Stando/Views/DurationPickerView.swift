@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DurationPickerView: View {
     @State private var hours: Int = 0
-    @State private var minutes: Int = 900
+    @State private var minutes: Int = 15
     @State private var seconds: Int = 0
 
     @Binding var durationSeconds: Int
