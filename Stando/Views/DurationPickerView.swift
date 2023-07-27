@@ -55,9 +55,10 @@ struct DurationPickerView: View {
     }
 
     var body: some View {
-        HStack {
+        HStack(spacing: 0) {
             Stepper {
                 Text("\(hours) hours")
+                    .frame(width: 50, alignment: .trailing)
             } onIncrement: {
                 if hours < 9 {
                     incrementHour()
@@ -112,7 +113,7 @@ struct DurationPickerView: View {
                 }
             }
         }
-        .padding(.leading, 20)
+//        .padding(.leading, 20)
         .background(.background)
         .cornerRadius(4)
     }
@@ -120,6 +121,6 @@ struct DurationPickerView: View {
 
 struct DurationPickerView_Previews: PreviewProvider {
     static var previews: some View {
-        DurationPickerView(durationSeconds: .constant(123))
+        DurationPickerView(durationSeconds: .constant(1234))
     }
 }
