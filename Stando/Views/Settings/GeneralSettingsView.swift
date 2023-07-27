@@ -46,6 +46,7 @@ struct GeneralSettingsView: View {
                 Toggle("Pause after each movement", isOn: $isPausingAtEndOfMovement)
                     .frame(height: frameHeight)
                 Toggle("Send notifications to sit / stand", isOn: $isSendingMovementNotifications)
+                    .frame(height: frameHeight)
                 DurationPickerView(durationSeconds: $sitDurationSeconds)
                     .frame(height: frameHeight)
                 DurationPickerView(durationSeconds: $standDurationSeconds)
