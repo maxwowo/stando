@@ -52,6 +52,10 @@ class MovementModel: ObservableObject {
 
         if !isPausingAtLaunch {
             start()
+
+            if isSendingMovementNotifications {
+                sendMovementNotification()
+            }
         }
     }
 
