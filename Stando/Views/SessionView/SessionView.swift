@@ -49,6 +49,14 @@ struct SessionView: View {
 
 struct SessionView_Previews: PreviewProvider {
     static var previews: some View {
+        let userDefaults: UserDefaults = {
+            let defaults = UserDefaults()
+
+            defaults.set(true, forKey: SettingConstants.isPausingAtLaunch)
+
+            return defaults
+        }()
+
         SessionView()
             .environmentObject(MovementModel(
                 posture: Posture.sitting,
@@ -56,5 +64,6 @@ struct SessionView_Previews: PreviewProvider {
                 totalSitDurationSeconds: 123,
                 totalStandDurationSeconds: 123
             ))
+            .defaultAppStorage(userDefaults)
     }
 }
