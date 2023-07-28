@@ -65,11 +65,13 @@ class MovementModel: ObservableObject {
         content.title = "It's time to \(isSitting ? "sit down" : "stand up")!"
 
         if isSitting {
-            content.subtitle = "Find a comfy spot to sit down and give your legs a well-deserved break. Take a few "
-            + "deep breaths and relax your mind."
+            if let message = MessageConstants.sitMessages.randomElement() {
+                content.subtitle = message
+            }
         } else {
-            content.subtitle = "Why not stand up and stretch those legs? A quick walk around the room can do wonders "
-            + "for your energy and focus."
+            if let message = MessageConstants.standMessages.randomElement() {
+                content.subtitle = message
+            }
         }
 
         content.sound = UNNotificationSound.default
