@@ -12,6 +12,7 @@
 		143D74B42A67C66B006CD07E /* HoverableImageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143D74B32A67C66B006CD07E /* HoverableImageButtonView.swift */; };
 		143D74B62A67CBB7006CD07E /* DimensionConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143D74B52A67CBB7006CD07E /* DimensionConstants.swift */; };
 		143D74BC2A67CF36006CD07E /* MovementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143D74BB2A67CF36006CD07E /* MovementModel.swift */; };
+		1495C43C2A73A61300BED177 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 1495C43B2A73A61300BED177 /* LaunchAtLogin */; };
 		149CF31E2A693A0900DB79D0 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149CF31D2A693A0900DB79D0 /* CountdownView.swift */; };
 		149CF3202A693DCD00DB79D0 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149CF31F2A693DCD00DB79D0 /* SessionView.swift */; };
 		149CF3222A693E3300DB79D0 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149CF3212A693E3300DB79D0 /* HeaderView.swift */; };
@@ -82,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1495C43C2A73A61300BED177 /* LaunchAtLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,12 +234,16 @@
 				14DE79862A61031E0090E61D /* Sources */,
 				14DE79872A61031E0090E61D /* Frameworks */,
 				14DE79882A61031E0090E61D /* Resources */,
+				1495C43D2A73A67B00BED177 /* Copy “Launch at Login Helper” */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Stando;
+			packageProductDependencies = (
+				1495C43B2A73A61300BED177 /* LaunchAtLogin */,
+			);
 			productName = Stando;
 			productReference = 14DE798A2A61031E0090E61D /* Stando.app */;
 			productType = "com.apple.product-type.application";
@@ -310,6 +316,9 @@
 				Base,
 			);
 			mainGroup = 14DE79812A61031E0090E61D;
+			packageReferences = (
+				1495C43A2A73A61300BED177 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
+			);
 			productRefGroup = 14DE798B2A61031E0090E61D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -346,6 +355,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1495C43D2A73A67B00BED177 /* Copy “Launch at Login Helper” */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${BUILT_PRODUCTS_DIR}/LaunchAtLogin_LaunchAtLogin.bundle/Contents/Resources/copy-helper-swiftpm.sh",
+				"${BUILT_PRODUCTS_DIR}/LaunchAtLogin_LaunchAtLogin.bundle/Contents/Resources/LaunchAtLoginHelper.zip",
+				"${BUILT_PRODUCTS_DIR}/LaunchAtLogin_LaunchAtLogin.bundle/Contents/Resources/LaunchAtLoginHelper-with-runtime.zip",
+			);
+			name = "Copy “Launch at Login Helper”";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILT_PRODUCTS_DIR}/LaunchAtLogin_LaunchAtLogin.bundle/Contents/Resources/copy-helper-swiftpm.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		14DE79862A61031E0090E61D /* Sources */ = {
@@ -690,6 +724,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1495C43A2A73A61300BED177 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1495C43B2A73A61300BED177 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1495C43A2A73A61300BED177 /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
+			productName = LaunchAtLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 14DE79822A61031E0090E61D /* Project object */;
 }
