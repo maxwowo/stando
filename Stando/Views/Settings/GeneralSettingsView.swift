@@ -6,9 +6,9 @@
 //
 
 import SwiftUI
+import LaunchAtLogin
 
 struct GeneralSettingsView: View {
-    @AppStorage(SettingConstants.isLaunchingAtLogin) private var isLaunchingAtLogin = true
     @AppStorage(SettingConstants.isPausingAtLaunch) private var isPausingAtLaunch = false
     @AppStorage(SettingConstants.isSittingAtLaunch) private var isSittingAtLaunch = true
     @AppStorage(SettingConstants.isPausingAtEndOfMovement) private var isPausingAtEndOfMovement = false
@@ -37,7 +37,7 @@ struct GeneralSettingsView: View {
                     .frame(height: frameHeight)
             }
             VStack(alignment: .leading) {
-                Toggle("Launch at login", isOn: $isLaunchingAtLogin)
+                LaunchAtLogin.Toggle()
                     .frame(height: frameHeight)
                 Toggle("Pause at launch", isOn: $isPausingAtLaunch)
                     .frame(height: frameHeight)
