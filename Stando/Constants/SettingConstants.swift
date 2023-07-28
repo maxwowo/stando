@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SettingConstants {
     // General
-    static let isLaunchingAtLogin = "isLaunchingAtLogin"
     static let isPausingAtLaunch = "isPausingAtLaunch"
     static let isSittingAtLaunch = "isSittingAtLaunch"
     static let isPausingAtEndOfMovement = "isPausingAtEndOfMovement"

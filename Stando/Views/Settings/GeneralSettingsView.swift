@@ -25,7 +25,7 @@ struct GeneralSettingsView: View {
                     .frame(height: frameHeight)
                 Text("Auto-play")
                     .frame(height: frameHeight)
-                Text("Default posture")
+                Text("Initial posture")
                     .frame(height: frameHeight)
                 Text("Take a break")
                     .frame(height: frameHeight)
