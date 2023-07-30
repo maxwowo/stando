@@ -19,4 +19,4 @@ Stando is an application that allows you to keep track of your sit & stand routi
 
 ## License
 
-[MIT License](https://github.com/exelban/stats/blob/master/LICENSE)
+[MIT License](https://github.com/maxwowo/stando/blob/main/LICENSE)
