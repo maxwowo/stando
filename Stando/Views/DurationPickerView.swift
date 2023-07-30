@@ -113,7 +113,6 @@ struct DurationPickerView: View {
                 }
             }
         }
-//        .padding(.leading, 20)
         .background(.background)
         .cornerRadius(4)
     }
