@@ -10,7 +10,7 @@ Stando is supported on the released macOS version starting from macOS 13.0 (Vent
 
 ## Features
 
-Stats is an application that allows you to monitor your macOS system.
+Stando is an application that allows you to keep track of your sit & stand routines.
 
 - Customizable sit and stand durations
 - Gentle and non-intrusive notifications
