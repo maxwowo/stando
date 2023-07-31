@@ -120,7 +120,7 @@
 		143D74B82A67CE05006CD07E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				14C1DAD02A6FA6710045E6CE /* Settings */,
+				14C1DAD02A6FA6710045E6CE /* SettingsView */,
 				149CF3232A693F3C00DB79D0 /* SessionView */,
 				143D74B92A67CE19006CD07E /* ImageButtonView */,
 				14DE267E2A6674AF00754CC9 /* PopoverView.swift */,
@@ -160,13 +160,13 @@
 			path = SessionView;
 			sourceTree = "<group>";
 		};
-		14C1DAD02A6FA6710045E6CE /* Settings */ = {
+		14C1DAD02A6FA6710045E6CE /* SettingsView */ = {
 			isa = PBXGroup;
 			children = (
 				142A4E802A6A5B97006D5A32 /* SettingsView.swift */,
 				14C1DAD12A6FA6890045E6CE /* GeneralSettingsView.swift */,
 			);
-			path = Settings;
+			path = SettingsView;
 			sourceTree = "<group>";
 		};
 		14DE79812A61031E0090E61D = {

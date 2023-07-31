@@ -25,11 +25,12 @@ struct SessionView: View {
     }
 
     var body: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: 0) {
             SessionMetricView(
                 name: "Sitting",
                 value: "\(formatDurationHours(durationSeconds: movement.totalSitDurationSeconds)) h"
             )
+            .frame(minWidth: 70)
 
             Divider()
                 .frame(height: 30)
@@ -38,11 +39,16 @@ struct SessionView: View {
                 name: "Standing",
                 value: "\(formatDurationHours(durationSeconds: movement.totalStandDurationSeconds)) h"
             )
+            .frame(minWidth: 70)
 
             Divider()
                 .frame(height: 30)
 
-            SessionMetricView(name: "Calories", value: String(format: "%.2f", calculateCaloriesBurned()))
+            SessionMetricView(
+                name: "Calories",
+                value: String(format: "%.2f", calculateCaloriesBurned())
+            )
+            .frame(minWidth: 70)
         }
     }
 }

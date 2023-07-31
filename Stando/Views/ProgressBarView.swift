@@ -27,6 +27,7 @@ struct ProgressBarView: View {
                     )
                 )
                 .rotationEffect(.degrees(-90))
+                .animation(.easeInOut, value: progress)
         }
         .padding(5)
     }
