@@ -15,4 +15,7 @@ struct SettingConstants {
     static let isSendingMovementNotifications = "isSendingMovementNotifications"
     static let sitDurationSeconds = "sitDurationSeconds"
     static let standDurationSeconds = "standDurationSeconds"
+
+    // Notifications
+    static let notificationVolume = "notificationVolume"
 }
