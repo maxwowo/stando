@@ -15,6 +15,12 @@ struct SettingsView: View {
                     Label("General", systemImage: "gear")
                 }
                 .frame(width: 500)
+
+            NotificationSettingsView()
+                .tabItem {
+                    Label("Notifications", systemImage: "bell")
+                }
+                .frame(width: 500)
         }
         .padding()
     }

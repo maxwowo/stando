@@ -13,6 +13,7 @@
 		143D74B62A67CBB7006CD07E /* DimensionConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143D74B52A67CBB7006CD07E /* DimensionConstants.swift */; };
 		143D74BC2A67CF36006CD07E /* MovementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143D74BB2A67CF36006CD07E /* MovementModel.swift */; };
 		14583AC82B36756700BF1D14 /* SettingsAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 14583AC72B36756700BF1D14 /* SettingsAccess */; };
+		14583ACA2B36763600BF1D14 /* NotificationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14583AC92B36763600BF1D14 /* NotificationSettingsView.swift */; };
 		1495C43C2A73A61300BED177 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 1495C43B2A73A61300BED177 /* LaunchAtLogin */; };
 		1495C4422A73AC4100BED177 /* MessageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1495C4412A73AC4100BED177 /* MessageConstants.swift */; };
 		149CF31E2A693A0900DB79D0 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149CF31D2A693A0900DB79D0 /* CountdownView.swift */; };
@@ -57,6 +58,7 @@
 		143D74B32A67C66B006CD07E /* HoverableImageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverableImageButtonView.swift; sourceTree = "<group>"; };
 		143D74B52A67CBB7006CD07E /* DimensionConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimensionConstants.swift; sourceTree = "<group>"; };
 		143D74BB2A67CF36006CD07E /* MovementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementModel.swift; sourceTree = "<group>"; };
+		14583AC92B36763600BF1D14 /* NotificationSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsView.swift; sourceTree = "<group>"; };
 		1495C4412A73AC4100BED177 /* MessageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageConstants.swift; sourceTree = "<group>"; };
 		149CF31D2A693A0900DB79D0 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		149CF31F2A693DCD00DB79D0 /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			children = (
 				142A4E802A6A5B97006D5A32 /* SettingsView.swift */,
 				14C1DAD12A6FA6890045E6CE /* GeneralSettingsView.swift */,
+				14583AC92B36763600BF1D14 /* NotificationSettingsView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				14AE5CB22A6A386200647AFD /* SettingConstants.swift in Sources */,
 				14DE267F2A6674AF00754CC9 /* PopoverView.swift in Sources */,
 				14C1DAD22A6FA6890045E6CE /* GeneralSettingsView.swift in Sources */,
+				14583ACA2B36763600BF1D14 /* NotificationSettingsView.swift in Sources */,
 				1495C4422A73AC4100BED177 /* MessageConstants.swift in Sources */,
 				149CF3222A693E3300DB79D0 /* HeaderView.swift in Sources */,
 				149CF31E2A693A0900DB79D0 /* CountdownView.swift in Sources */,
