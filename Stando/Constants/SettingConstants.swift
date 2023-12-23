@@ -12,10 +12,10 @@ struct SettingConstants {
     static let isPausingAtLaunch = "isPausingAtLaunch"
     static let isSittingAtLaunch = "isSittingAtLaunch"
     static let isPausingAtEndOfMovement = "isPausingAtEndOfMovement"
-    static let isSendingMovementNotifications = "isSendingMovementNotifications"
     static let sitDurationSeconds = "sitDurationSeconds"
     static let standDurationSeconds = "standDurationSeconds"
 
     // Notifications
+    static let isSendingMovementNotifications = "isSendingMovementNotifications"
     static let notificationVolume = "notificationVolume"
 }
