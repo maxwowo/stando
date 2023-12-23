@@ -8,6 +8,15 @@
         "branch" : "main",
         "revision" : "d811817ce35d74872a1170c851cab243a2b8b559"
       }
+    },
+    {
+      "identity" : "settingsaccess",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/orchetect/SettingsAccess",
+      "state" : {
+        "revision" : "0fd73c8b5892e88acb13adb7f36a4ba9293a0061",
+        "version" : "1.4.0"
+      }
     }
   ],
   "version" : 2
