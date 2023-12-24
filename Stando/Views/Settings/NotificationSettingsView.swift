@@ -49,20 +49,28 @@ struct NotificationSettingsView: View {
                 Toggle("Send notifications to sit / stand", isOn: $isSendingMovementNotifications)
                     .frame(height: frameHeight)
 
-                Picker("Select a file", selection: $notificationSoundPath) {
-                    Text(defaultToneOption.text).tag(defaultToneOption.id)
+                HStack {
+                    Picker("Select a file", selection: $notificationSoundPath) {
+                        Text(defaultToneOption.text).tag(defaultToneOption.id)
 
-                    Divider()
+                        Divider()
 
-                    ForEach(toneOptions) { fileName in
-                        Text(fileName.text).tag(fileName.id)
+                        ForEach(toneOptions) { fileName in
+                            Text(fileName.text).tag(fileName.id)
+                        }
                     }
-                }
-                .frame(width: 200, height: frameHeight)
-                .labelsHidden()
-                .onAppear(perform: {
-                    readSystemSoundDirectoryContents()
-                })
+                    .labelsHidden()
+                    .onAppear(perform: {
+                        readSystemSoundDirectoryContents()
+                    })
+
+                    Button {
+
+                    } label: {
+                        Image(systemName: "play.circle")
+                    }
+                    .buttonStyle(.plain)
+                }.frame(width: 200, height: frameHeight)
 
                 Slider(value: $notificationVolume, in: 0.0...1.0) {} minimumValueLabel: {
                     Image("speaker.fill")
