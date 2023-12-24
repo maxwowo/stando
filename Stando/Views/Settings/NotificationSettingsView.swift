@@ -11,7 +11,14 @@ struct NotificationSettingsView: View {
     @AppStorage(SettingConstants.isSendingMovementNotifications) private var isSendingMovementNotifications = true
     @AppStorage(SettingConstants.notificationVolume) private var notificationVolume = 1.0
 
-    @State private var fileNames: [String] = []
+    struct CustomToneOption: Identifiable {
+        var id: String
+        var text: String
+    }
+
+    private var defaultToneOption = CustomToneOption(id: "default", text: "Default")
+
+    @State private var toneOptions: [CustomToneOption] = []
     @State private var selectedFile: String?
 
     private let frameHeight: Double = 20
@@ -20,10 +27,11 @@ struct NotificationSettingsView: View {
         let systemSoundsURL = URL(fileURLWithPath: "/System/Library/Sounds")
 
         do {
-            let soundFileURLs = try FileManager.default.contentsOfDirectory(at: systemSoundsURL, includingPropertiesForKeys: nil)
-            fileNames = soundFileURLs.map { $0.deletingPathExtension().lastPathComponent }.sorted()
+            let toneFiles = try FileManager.default.contentsOfDirectory(at: systemSoundsURL, includingPropertiesForKeys: nil)
+
+            toneOptions = toneFiles.map { toneFile in CustomToneOption(id: toneFile.absoluteString, text: toneFile.deletingPathExtension().lastPathComponent) }.sorted { $0.text < $1.text}
         } catch {
-            print("Error reading system sound directory contents: \(error)")
+            print("Error reading sounds directory contents: \(error)")
         }
     }
 
@@ -32,7 +40,7 @@ struct NotificationSettingsView: View {
             VStack(alignment: .trailing) {
                 Text("Be notified")
                     .frame(height: frameHeight)
-                Text("Custom tones")
+                Text("Custom tone")
                     .frame(height: frameHeight)
                 Text("Tone volume")
                     .frame(height: frameHeight)
@@ -42,8 +50,12 @@ struct NotificationSettingsView: View {
                     .frame(height: frameHeight)
 
                 Picker("Select a file", selection: $selectedFile) {
-                    ForEach(fileNames, id: \.self) { fileName in
-                        Text(fileName).tag(fileName)
+                    Text(defaultToneOption.text).tag(defaultToneOption.id)
+
+                    Divider()
+
+                    ForEach(toneOptions) { fileName in
+                        Text(fileName.text).tag(fileName.id)
                     }
                 }
                 .frame(width: 200, height: frameHeight)
