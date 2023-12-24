@@ -79,7 +79,7 @@ class MovementModel: ObservableObject {
             }
         }
 
-        content.sound = notificationSoundPath == "Default" ? UNNotificationSound.default :UNNotificationSound(named: UNNotificationSoundName(rawValue: notificationSoundPath))
+        content.sound = notificationSoundPath == "Default" ? UNNotificationSound.default : UNNotificationSound(named: UNNotificationSoundName(rawValue: notificationSoundPath))
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
 
