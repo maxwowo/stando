@@ -24,8 +24,6 @@ struct NotificationSettingsView: View {
                     .frame(height: frameHeight)
                 Text("Custom tone")
                     .frame(height: frameHeight)
-                Text("Tone volume")
-                    .frame(height: frameHeight)
             }
             VStack(alignment: .leading) {
                 Toggle("Send notifications to sit / stand", isOn: $isSendingMovementNotifications)
@@ -72,14 +70,6 @@ struct NotificationSettingsView: View {
                     .buttonStyle(.plain)
                     .disabled(notificationSoundPath == "Default")
                 }.frame(width: 200, height: frameHeight)
-
-                Slider(value: $notificationVolume, in: 0.0...1.0) {} minimumValueLabel: {
-                    Image("speaker.fill")
-                } maximumValueLabel: {
-                    Image("speaker.wave.3.fill")
-                }
-                .frame(width: 200, height: frameHeight)
-                .disabled(notificationSoundPath == "Default")
             }
         }
     }
