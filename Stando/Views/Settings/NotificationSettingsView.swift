@@ -6,34 +6,16 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct NotificationSettingsView: View {
     @AppStorage(SettingConstants.isSendingMovementNotifications) private var isSendingMovementNotifications = true
     @AppStorage(SettingConstants.notificationVolume) private var notificationVolume = 1.0
-    @AppStorage(SettingConstants.notificationSoundPath) private var notificationSoundPath = "default"
+    @AppStorage(SettingConstants.notificationSoundPath) private var notificationSoundPath = "Default"
 
-    struct CustomToneOption: Identifiable {
-        var id: String
-        var text: String
-    }
-
-    private var defaultToneOption = CustomToneOption(id: "default", text: "Default")
-
-    @State private var toneOptions: [CustomToneOption] = []
+    @State private var audioPlayer: AVAudioPlayer?
 
     private let frameHeight: Double = 20
-
-    func readSystemSoundDirectoryContents() {
-        let systemSoundsURL = URL(fileURLWithPath: "/System/Library/Sounds")
-
-        do {
-            let toneFiles = try FileManager.default.contentsOfDirectory(at: systemSoundsURL, includingPropertiesForKeys: nil)
-
-            toneOptions = toneFiles.map { toneFile in CustomToneOption(id: toneFile.absoluteString, text: toneFile.deletingPathExtension().lastPathComponent) }.sorted { $0.text < $1.text}
-        } catch {
-            print("Error reading sounds directory contents: \(error)")
-        }
-    }
 
     var body: some View {
         HStack(alignment: .top) {
@@ -51,21 +33,41 @@ struct NotificationSettingsView: View {
 
                 HStack {
                     Picker("Select a file", selection: $notificationSoundPath) {
-                        Text(defaultToneOption.text).tag(defaultToneOption.id)
+                        Text("Default").tag("Default")
 
                         Divider()
 
-                        ForEach(toneOptions) { fileName in
-                            Text(fileName.text).tag(fileName.id)
-                        }
+                        Text("Basso").tag("Basso.aiff")
+                        Text("Blow").tag("Blow.aiff")
+                        Text("Bottle").tag("Bottle.aiff")
+                        Text("Frog").tag("Frog.aiff")
+                        Text("Funk").tag("Funk.aiff")
+                        Text("Glass").tag("Glass.aiff")
+                        Text("Hero").tag("Hero.aiff")
+                        Text("Morse").tag("Morse.aiff")
+                        Text("Ping").tag("Ping.aiff")
+                        Text("Pop").tag("Pop.aiff")
+                        Text("Purr").tag("Purr.aiff")
+                        Text("Sosumi").tag("Sosumi.aiff")
+                        Text("Submarine").tag("Submarine.aiff")
+                        Text("Tink").tag("Tink.aiff")
                     }
                     .labelsHidden()
-                    .onAppear(perform: {
-                        readSystemSoundDirectoryContents()
-                    })
 
                     Button {
+                        guard let soundUrl = Bundle.main.url(forResource: notificationSoundPath, withExtension: nil) else {
+                            return print("Audio file not found")
+                        }
 
+                        print(soundUrl)
+
+                        do {
+                            audioPlayer = try AVAudioPlayer(contentsOf: soundUrl)
+
+                            audioPlayer?.play()
+                        } catch {
+                            print("Error playing audio: \(error.localizedDescription)")
+                        }
                     } label: {
                         Image(systemName: "play.circle")
                     }
