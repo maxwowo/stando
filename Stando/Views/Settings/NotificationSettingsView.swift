@@ -10,6 +10,7 @@ import SwiftUI
 struct NotificationSettingsView: View {
     @AppStorage(SettingConstants.isSendingMovementNotifications) private var isSendingMovementNotifications = true
     @AppStorage(SettingConstants.notificationVolume) private var notificationVolume = 1.0
+    @AppStorage(SettingConstants.notificationSoundPath) private var notificationSoundPath = "default"
 
     struct CustomToneOption: Identifiable {
         var id: String
@@ -19,7 +20,6 @@ struct NotificationSettingsView: View {
     private var defaultToneOption = CustomToneOption(id: "default", text: "Default")
 
     @State private var toneOptions: [CustomToneOption] = []
-    @State private var selectedFile: String?
 
     private let frameHeight: Double = 20
 
@@ -49,7 +49,7 @@ struct NotificationSettingsView: View {
                 Toggle("Send notifications to sit / stand", isOn: $isSendingMovementNotifications)
                     .frame(height: frameHeight)
 
-                Picker("Select a file", selection: $selectedFile) {
+                Picker("Select a file", selection: $notificationSoundPath) {
                     Text(defaultToneOption.text).tag(defaultToneOption.id)
 
                     Divider()

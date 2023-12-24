@@ -17,5 +17,6 @@ struct SettingConstants {
 
     // Notifications
     static let isSendingMovementNotifications = "isSendingMovementNotifications"
+    static let notificationSoundPath = "notificationSoundPath"
     static let notificationVolume = "notificationVolume"
 }
