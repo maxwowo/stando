@@ -51,6 +51,7 @@ struct NotificationSettingsView: View {
                         Text("Tink").tag("Tink.aiff")
                     }
                     .labelsHidden()
+                    .frame(width: 150, height: frameHeight)
 
                     Button {
                         guard let soundUrl = Bundle.main.url(forResource: notificationSoundPath, withExtension: nil) else {
@@ -69,7 +70,8 @@ struct NotificationSettingsView: View {
                     }
                     .buttonStyle(.plain)
                     .disabled(notificationSoundPath == "Default")
-                }.frame(width: 200, height: frameHeight)
+                    .frame(height: frameHeight)
+                }
             }
         }
     }
