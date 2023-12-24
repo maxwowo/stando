@@ -70,6 +70,7 @@ struct NotificationSettingsView: View {
                         Image(systemName: "play.circle")
                     }
                     .buttonStyle(.plain)
+                    .disabled(notificationSoundPath == "Default")
                 }.frame(width: 200, height: frameHeight)
 
                 Slider(value: $notificationVolume, in: 0.0...1.0) {} minimumValueLabel: {
@@ -78,6 +79,7 @@ struct NotificationSettingsView: View {
                     Image("speaker.wave.3.fill")
                 }
                 .frame(width: 200, height: frameHeight)
+                .disabled(notificationSoundPath == "Default")
             }
         }
     }
