@@ -14,6 +14,20 @@
 		143D74BC2A67CF36006CD07E /* MovementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143D74BB2A67CF36006CD07E /* MovementModel.swift */; };
 		14583AC82B36756700BF1D14 /* SettingsAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 14583AC72B36756700BF1D14 /* SettingsAccess */; };
 		14583ACA2B36763600BF1D14 /* NotificationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14583AC92B36763600BF1D14 /* NotificationSettingsView.swift */; };
+		146C22CC2B38273200D2A3FB /* Purr.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 146C22BE2B38273200D2A3FB /* Purr.aiff */; };
+		146C22CD2B38273200D2A3FB /* Frog.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 146C22BF2B38273200D2A3FB /* Frog.aiff */; };
+		146C22CE2B38273200D2A3FB /* Tink.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 146C22C02B38273200D2A3FB /* Tink.aiff */; };
+		146C22CF2B38273200D2A3FB /* Bottle.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 146C22C12B38273200D2A3FB /* Bottle.aiff */; };
+		146C22D02B38273200D2A3FB /* Sosumi.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 146C22C22B38273200D2A3FB /* Sosumi.aiff */; };
+		146C22D12B38273200D2A3FB /* Pop.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 146C22C32B38273200D2A3FB /* Pop.aiff */; };
+		146C22D22B38273200D2A3FB /* Blow.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 146C22C42B38273200D2A3FB /* Blow.aiff */; };
+		146C22D32B38273200D2A3FB /* Hero.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 146C22C52B38273200D2A3FB /* Hero.aiff */; };
+		146C22D42B38273200D2A3FB /* Ping.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 146C22C62B38273200D2A3FB /* Ping.aiff */; };
+		146C22D52B38273200D2A3FB /* Basso.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 146C22C72B38273200D2A3FB /* Basso.aiff */; };
+		146C22D62B38273200D2A3FB /* Submarine.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 146C22C82B38273200D2A3FB /* Submarine.aiff */; };
+		146C22D72B38273200D2A3FB /* Glass.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 146C22C92B38273200D2A3FB /* Glass.aiff */; };
+		146C22D82B38273200D2A3FB /* Morse.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 146C22CA2B38273200D2A3FB /* Morse.aiff */; };
+		146C22D92B38273200D2A3FB /* Funk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 146C22CB2B38273200D2A3FB /* Funk.aiff */; };
 		1495C43C2A73A61300BED177 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 1495C43B2A73A61300BED177 /* LaunchAtLogin */; };
 		1495C4422A73AC4100BED177 /* MessageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1495C4412A73AC4100BED177 /* MessageConstants.swift */; };
 		149CF31E2A693A0900DB79D0 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149CF31D2A693A0900DB79D0 /* CountdownView.swift */; };
@@ -59,6 +73,20 @@
 		143D74B52A67CBB7006CD07E /* DimensionConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimensionConstants.swift; sourceTree = "<group>"; };
 		143D74BB2A67CF36006CD07E /* MovementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementModel.swift; sourceTree = "<group>"; };
 		14583AC92B36763600BF1D14 /* NotificationSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsView.swift; sourceTree = "<group>"; };
+		146C22BE2B38273200D2A3FB /* Purr.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Purr.aiff; sourceTree = "<group>"; };
+		146C22BF2B38273200D2A3FB /* Frog.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Frog.aiff; sourceTree = "<group>"; };
+		146C22C02B38273200D2A3FB /* Tink.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Tink.aiff; sourceTree = "<group>"; };
+		146C22C12B38273200D2A3FB /* Bottle.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Bottle.aiff; sourceTree = "<group>"; };
+		146C22C22B38273200D2A3FB /* Sosumi.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Sosumi.aiff; sourceTree = "<group>"; };
+		146C22C32B38273200D2A3FB /* Pop.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Pop.aiff; sourceTree = "<group>"; };
+		146C22C42B38273200D2A3FB /* Blow.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Blow.aiff; sourceTree = "<group>"; };
+		146C22C52B38273200D2A3FB /* Hero.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Hero.aiff; sourceTree = "<group>"; };
+		146C22C62B38273200D2A3FB /* Ping.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Ping.aiff; sourceTree = "<group>"; };
+		146C22C72B38273200D2A3FB /* Basso.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Basso.aiff; sourceTree = "<group>"; };
+		146C22C82B38273200D2A3FB /* Submarine.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Submarine.aiff; sourceTree = "<group>"; };
+		146C22C92B38273200D2A3FB /* Glass.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Glass.aiff; sourceTree = "<group>"; };
+		146C22CA2B38273200D2A3FB /* Morse.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Morse.aiff; sourceTree = "<group>"; };
+		146C22CB2B38273200D2A3FB /* Funk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Funk.aiff; sourceTree = "<group>"; };
 		1495C4412A73AC4100BED177 /* MessageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageConstants.swift; sourceTree = "<group>"; };
 		149CF31D2A693A0900DB79D0 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		149CF31F2A693DCD00DB79D0 /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
@@ -155,6 +183,27 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		146C22BD2B38272900D2A3FB /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				146C22C72B38273200D2A3FB /* Basso.aiff */,
+				146C22C42B38273200D2A3FB /* Blow.aiff */,
+				146C22C12B38273200D2A3FB /* Bottle.aiff */,
+				146C22BF2B38273200D2A3FB /* Frog.aiff */,
+				146C22CB2B38273200D2A3FB /* Funk.aiff */,
+				146C22C92B38273200D2A3FB /* Glass.aiff */,
+				146C22C52B38273200D2A3FB /* Hero.aiff */,
+				146C22CA2B38273200D2A3FB /* Morse.aiff */,
+				146C22C62B38273200D2A3FB /* Ping.aiff */,
+				146C22C32B38273200D2A3FB /* Pop.aiff */,
+				146C22BE2B38273200D2A3FB /* Purr.aiff */,
+				146C22C22B38273200D2A3FB /* Sosumi.aiff */,
+				146C22C82B38273200D2A3FB /* Submarine.aiff */,
+				146C22C02B38273200D2A3FB /* Tink.aiff */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		149CF3232A693F3C00DB79D0 /* Session */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +246,7 @@
 		14DE798C2A61031E0090E61D /* Stando */ = {
 			isa = PBXGroup;
 			children = (
+				146C22BD2B38272900D2A3FB /* Sounds */,
 				14C459E32A761A6A00B597C3 /* Info.plist */,
 				143D74BA2A67CEF8006CD07E /* Models */,
 				143D74B82A67CE05006CD07E /* Views */,
@@ -347,8 +397,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				146C22D82B38273200D2A3FB /* Morse.aiff in Resources */,
+				146C22D92B38273200D2A3FB /* Funk.aiff in Resources */,
+				146C22D72B38273200D2A3FB /* Glass.aiff in Resources */,
+				146C22D22B38273200D2A3FB /* Blow.aiff in Resources */,
+				146C22CE2B38273200D2A3FB /* Tink.aiff in Resources */,
+				146C22CF2B38273200D2A3FB /* Bottle.aiff in Resources */,
+				146C22D02B38273200D2A3FB /* Sosumi.aiff in Resources */,
+				146C22D42B38273200D2A3FB /* Ping.aiff in Resources */,
+				146C22D62B38273200D2A3FB /* Submarine.aiff in Resources */,
+				146C22D12B38273200D2A3FB /* Pop.aiff in Resources */,
+				146C22D52B38273200D2A3FB /* Basso.aiff in Resources */,
 				14DE79952A61031F0090E61D /* Preview Assets.xcassets in Resources */,
 				14DE79922A61031F0090E61D /* Assets.xcassets in Resources */,
+				146C22CC2B38273200D2A3FB /* Purr.aiff in Resources */,
+				146C22CD2B38273200D2A3FB /* Frog.aiff in Resources */,
+				146C22D32B38273200D2A3FB /* Hero.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
