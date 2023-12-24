@@ -21,7 +21,7 @@ struct NotificationSettingsView: View {
 
         do {
             let soundFileURLs = try FileManager.default.contentsOfDirectory(at: systemSoundsURL, includingPropertiesForKeys: nil)
-            fileNames = soundFileURLs.map { $0.lastPathComponent }
+            fileNames = soundFileURLs.map { $0.deletingPathExtension().lastPathComponent }.sorted()
         } catch {
             print("Error reading system sound directory contents: \(error)")
         }
