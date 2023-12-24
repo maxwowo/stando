@@ -20,6 +20,7 @@ class MovementModel: ObservableObject {
     @AppStorage(SettingConstants.isSendingMovementNotifications) private var isSendingMovementNotifications = true
     @AppStorage(SettingConstants.sitDurationSeconds) private var sitDurationSeconds = 900
     @AppStorage(SettingConstants.standDurationSeconds) private var standDurationSeconds = 2700
+    @AppStorage(SettingConstants.notificationSoundPath) private var notificationSoundPath = "Default"
 
     @Published var posture: Posture
     @Published var durationSeconds: Int
@@ -78,7 +79,7 @@ class MovementModel: ObservableObject {
             }
         }
 
-        content.sound = UNNotificationSound.default
+        content.sound = notificationSoundPath == "Default" ? UNNotificationSound.default :UNNotificationSound(named: UNNotificationSoundName(rawValue: notificationSoundPath))
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
 
