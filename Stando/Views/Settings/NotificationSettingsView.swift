@@ -59,8 +59,6 @@ struct NotificationSettingsView: View {
                             return print("Audio file not found")
                         }
 
-                        print(soundUrl)
-
                         do {
                             audioPlayer = try AVAudioPlayer(contentsOf: soundUrl)
 
