@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141C0C0C2B396F4C0098D000 /* SettingViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141C0C0B2B396F4C0098D000 /* SettingViewConstants.swift */; };
 		142A4E812A6A5B97006D5A32 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142A4E802A6A5B97006D5A32 /* SettingsView.swift */; };
 		143D74B22A67A415006CD07E /* ImageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143D74B12A67A415006CD07E /* ImageButtonView.swift */; };
 		143D74B42A67C66B006CD07E /* HoverableImageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143D74B32A67C66B006CD07E /* HoverableImageButtonView.swift */; };
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		141C0C0B2B396F4C0098D000 /* SettingViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewConstants.swift; sourceTree = "<group>"; };
 		142A4E802A6A5B97006D5A32 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		143D74B12A67A415006CD07E /* ImageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButtonView.swift; sourceTree = "<group>"; };
 		143D74B32A67C66B006CD07E /* HoverableImageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverableImageButtonView.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				143D74B52A67CBB7006CD07E /* DimensionConstants.swift */,
 				14AE5CB12A6A386200647AFD /* SettingConstants.swift */,
 				1495C4412A73AC4100BED177 /* MessageConstants.swift */,
+				141C0C0B2B396F4C0098D000 /* SettingViewConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				149CF3272A6943E900DB79D0 /* ProgressView.swift in Sources */,
 				149CF3292A6944AB00DB79D0 /* ControlsView.swift in Sources */,
 				14DE798E2A61031E0090E61D /* StandoApp.swift in Sources */,
+				141C0C0C2B396F4C0098D000 /* SettingViewConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

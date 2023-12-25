@@ -15,19 +15,17 @@ struct NotificationSettingsView: View {
 
     @State private var audioPlayer: AVAudioPlayer?
 
-    private let frameHeight: Double = 20
-
     var body: some View {
         HStack(alignment: .top) {
             VStack(alignment: .trailing) {
                 Text("Be notified")
-                    .frame(height: frameHeight)
+                    .frame(height: SettingViewConstants.frameHeight)
                 Text("Custom tone")
-                    .frame(height: frameHeight)
+                    .frame(height: SettingViewConstants.frameHeight)
             }
             VStack(alignment: .leading) {
                 Toggle("Send notifications to sit / stand", isOn: $isSendingMovementNotifications)
-                    .frame(height: frameHeight)
+                    .frame(height: SettingViewConstants.frameHeight)
 
                 HStack {
                     Picker("Select a file", selection: $notificationSoundPath) {
@@ -51,7 +49,7 @@ struct NotificationSettingsView: View {
                         Text("Tink").tag("Tink.aiff")
                     }
                     .labelsHidden()
-                    .frame(width: 150, height: frameHeight)
+                    .frame(width: 150, height: SettingViewConstants.frameHeight)
 
                     Button {
                         guard let soundUrl = Bundle.main.url(forResource: notificationSoundPath, withExtension: nil) else {
@@ -70,7 +68,7 @@ struct NotificationSettingsView: View {
                     }
                     .buttonStyle(.plain)
                     .disabled(notificationSoundPath == "Default")
-                    .frame(height: frameHeight)
+                    .frame(height: SettingViewConstants.frameHeight)
                 }
             }
         }
