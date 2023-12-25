@@ -10,7 +10,6 @@ import AVFoundation
 
 struct NotificationSettingsView: View {
     @AppStorage(SettingConstants.isSendingMovementNotifications) private var isSendingMovementNotifications = true
-    @AppStorage(SettingConstants.notificationVolume) private var notificationVolume = 1.0
     @AppStorage(SettingConstants.notificationSoundPath) private var notificationSoundPath = NotificationConstants.defaultFilePath
 
     @State private var audioPlayer: AVAudioPlayer?
