@@ -11,7 +11,7 @@ import AVFoundation
 struct NotificationSettingsView: View {
     @AppStorage(SettingConstants.isSendingMovementNotifications) private var isSendingMovementNotifications = true
     @AppStorage(SettingConstants.notificationVolume) private var notificationVolume = 1.0
-    @AppStorage(SettingConstants.notificationSoundPath) private var notificationSoundPath = "Default"
+    @AppStorage(SettingConstants.notificationSoundPath) private var notificationSoundPath = NotificationConstants.defaultFilePath
 
     @State private var audioPlayer: AVAudioPlayer?
 
@@ -29,7 +29,7 @@ struct NotificationSettingsView: View {
 
                 HStack {
                     Picker("Select a file", selection: $notificationSoundPath) {
-                        Text("Default").tag("Default")
+                        Text("Default").tag(NotificationConstants.defaultFilePath)
 
                         Divider()
 
@@ -67,7 +67,7 @@ struct NotificationSettingsView: View {
                         Image(systemName: "play.circle")
                     }
                     .buttonStyle(.plain)
-                    .disabled(notificationSoundPath == "Default")
+                    .disabled(notificationSoundPath == NotificationConstants.defaultFilePath)
                     .frame(height: SettingViewConstants.frameHeight)
                 }
             }

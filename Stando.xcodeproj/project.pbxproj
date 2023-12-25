@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		141C0C0C2B396F4C0098D000 /* SettingViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141C0C0B2B396F4C0098D000 /* SettingViewConstants.swift */; };
+		141C0C0E2B3970830098D000 /* NotificationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141C0C0D2B3970830098D000 /* NotificationConstants.swift */; };
 		142A4E812A6A5B97006D5A32 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142A4E802A6A5B97006D5A32 /* SettingsView.swift */; };
 		143D74B22A67A415006CD07E /* ImageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143D74B12A67A415006CD07E /* ImageButtonView.swift */; };
 		143D74B42A67C66B006CD07E /* HoverableImageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143D74B32A67C66B006CD07E /* HoverableImageButtonView.swift */; };
@@ -69,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		141C0C0B2B396F4C0098D000 /* SettingViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewConstants.swift; sourceTree = "<group>"; };
+		141C0C0D2B3970830098D000 /* NotificationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationConstants.swift; sourceTree = "<group>"; };
 		142A4E802A6A5B97006D5A32 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		143D74B12A67A415006CD07E /* ImageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButtonView.swift; sourceTree = "<group>"; };
 		143D74B32A67C66B006CD07E /* HoverableImageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverableImageButtonView.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				14AE5CB12A6A386200647AFD /* SettingConstants.swift */,
 				1495C4412A73AC4100BED177 /* MessageConstants.swift */,
 				141C0C0B2B396F4C0098D000 /* SettingViewConstants.swift */,
+				141C0C0D2B3970830098D000 /* NotificationConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				143D74B42A67C66B006CD07E /* HoverableImageButtonView.swift in Sources */,
 				14DE267D2A6673A100754CC9 /* ProgressBarView.swift in Sources */,
 				14C1DAD62A6FC6540045E6CE /* DurationPickerView.swift in Sources */,
+				141C0C0E2B3970830098D000 /* NotificationConstants.swift in Sources */,
 				142A4E812A6A5B97006D5A32 /* SettingsView.swift in Sources */,
 				143D74B62A67CBB7006CD07E /* DimensionConstants.swift in Sources */,
 				143D74BC2A67CF36006CD07E /* MovementModel.swift in Sources */,
