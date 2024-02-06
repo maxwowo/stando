@@ -19,7 +19,7 @@ struct ProgressView: View {
 
     var body: some View {
         ZStack {
-            ProgressBarView(progress: Double(movement.durationSeconds) / Double(durationSeconds))
+            ProgressBarView(progress: Double(movement.durationElapsedSeconds) / Double(durationSeconds))
                 .frame(width: DimensionConstants.screenWidth, height: DimensionConstants.screenWidth)
 
             CountdownView()
@@ -38,7 +38,7 @@ struct ProgressView_Previews: PreviewProvider {
         }()
 
         ProgressView()
-            .environmentObject(MovementModel(posture: Posture.sitting, durationSeconds: 123))
+            .environmentObject(MovementModel(posture: Posture.sitting, durationElapsedSeconds: 123))
             .defaultAppStorage(userDefaults)
     }
 }

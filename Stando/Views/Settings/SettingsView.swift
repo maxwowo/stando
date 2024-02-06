@@ -16,6 +16,12 @@ struct SettingsView: View {
                 }
                 .frame(width: 500)
 
+            AppearanceSettingsView()
+                .tabItem {
+                    Label("Appearance", systemImage: "paintpalette")
+                }
+                .frame(width: 500)
+
             NotificationSettingsView()
                 .tabItem {
                     Label("Notifications", systemImage: "bell")

@@ -15,6 +15,9 @@ struct SettingConstants {
     static let sitDurationSeconds = "sitDurationSeconds"
     static let standDurationSeconds = "standDurationSeconds"
 
+    // Appearance
+    static let isShowingDurationInMenuBar = "isShowingDurationInMenuBar"
+
     // Notifications
     static let isSendingMovementNotifications = "isSendingMovementNotifications"
     static let notificationSoundPath = "notificationSoundPath"

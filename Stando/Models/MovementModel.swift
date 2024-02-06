@@ -23,10 +23,10 @@ class MovementModel: ObservableObject {
     @AppStorage(SettingConstants.notificationSoundPath) private var notificationSoundPath = "Default"
 
     @Published var posture: Posture
-    @Published var durationSeconds: Int
+    @Published var durationElapsedSeconds: Int
     @Published var isPaused: Bool
-    @Published var totalSitDurationSeconds: Int
-    @Published var totalStandDurationSeconds: Int
+    @Published var totalSitDurationElapsedSeconds: Int
+    @Published var totalStandDurationElapsedSeconds: Int
 
     private var timer: AnyCancellable?
 
@@ -34,20 +34,28 @@ class MovementModel: ObservableObject {
         posture == Posture.sitting
     }
 
+    var formattedRemainingTime: String {
+        let durationSeconds = isSitting ? sitDurationSeconds : standDurationSeconds
+
+        let remainingDurationSeconds = durationSeconds - durationElapsedSeconds
+
+        return String(format: "%02d:%02d", remainingDurationSeconds / 60, remainingDurationSeconds % 60)
+    }
+
     init(
         posture: Posture = Posture.sitting,
-        durationSeconds: Int = 0,
+        durationElapsedSeconds: Int = 0,
         isPaused: Bool = true,
         timer: AnyCancellable? = nil,
-        totalSitDurationSeconds: Int = 0,
-        totalStandDurationSeconds: Int = 0
+        totalSitDurationElapsedSeconds: Int = 0,
+        totalStandDurationElapsedSeconds: Int = 0
     ) {
         self.posture = posture
-        self.durationSeconds = durationSeconds
+        self.durationElapsedSeconds = durationElapsedSeconds
         self.isPaused = isPaused
         self.timer = timer
-        self.totalSitDurationSeconds = totalSitDurationSeconds
-        self.totalStandDurationSeconds = totalStandDurationSeconds
+        self.totalSitDurationElapsedSeconds = totalSitDurationElapsedSeconds
+        self.totalStandDurationElapsedSeconds = totalStandDurationElapsedSeconds
 
         self.posture = isSittingAtLaunch ? Posture.sitting : Posture.standing
 
@@ -79,7 +87,9 @@ class MovementModel: ObservableObject {
             }
         }
 
-        content.sound = notificationSoundPath == "Default" ? UNNotificationSound.default : UNNotificationSound(named: UNNotificationSoundName(rawValue: notificationSoundPath))
+        content.sound = notificationSoundPath == "Default" ?
+        UNNotificationSound.default :
+        UNNotificationSound(named: UNNotificationSoundName(rawValue: notificationSoundPath))
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
 
@@ -96,15 +106,18 @@ class MovementModel: ObservableObject {
         timer = Timer.publish(every: 1, on: .main, in: .common)
             .autoconnect()
             .sink { _ in
-                self.durationSeconds += 1
+                self.durationElapsedSeconds += 1
 
                 if self.isSitting {
-                    self.totalSitDurationSeconds += 1
+                    self.totalSitDurationElapsedSeconds += 1
                 } else {
-                    self.totalStandDurationSeconds += 1
+                    self.totalStandDurationElapsedSeconds += 1
                 }
 
-                if self.durationSeconds >= (self.isSitting ? self.sitDurationSeconds : self.standDurationSeconds) {
+                if self.durationElapsedSeconds >= (self.isSitting ?
+                                                   self.sitDurationSeconds :
+                                                    self.standDurationSeconds
+                ) {
                     self.next()
                 }
             }
@@ -127,7 +140,7 @@ class MovementModel: ObservableObject {
     func restart(isPausing: Bool = false) {
         pause()
 
-        durationSeconds = 0
+        durationElapsedSeconds = 0
 
         if !isPausing {
             start()

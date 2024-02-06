@@ -30,6 +30,7 @@
 		146C22D72B38273200D2A3FB /* Glass.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 146C22C92B38273200D2A3FB /* Glass.aiff */; };
 		146C22D82B38273200D2A3FB /* Morse.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 146C22CA2B38273200D2A3FB /* Morse.aiff */; };
 		146C22D92B38273200D2A3FB /* Funk.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 146C22CB2B38273200D2A3FB /* Funk.aiff */; };
+		148F11AB2B71AA4000CB34B1 /* AppearanceSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148F11AA2B71AA4000CB34B1 /* AppearanceSettingsView.swift */; };
 		1495C43C2A73A61300BED177 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 1495C43B2A73A61300BED177 /* LaunchAtLogin */; };
 		1495C4422A73AC4100BED177 /* MessageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1495C4412A73AC4100BED177 /* MessageConstants.swift */; };
 		149CF31E2A693A0900DB79D0 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149CF31D2A693A0900DB79D0 /* CountdownView.swift */; };
@@ -91,6 +92,7 @@
 		146C22C92B38273200D2A3FB /* Glass.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Glass.aiff; sourceTree = "<group>"; };
 		146C22CA2B38273200D2A3FB /* Morse.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Morse.aiff; sourceTree = "<group>"; };
 		146C22CB2B38273200D2A3FB /* Funk.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Funk.aiff; sourceTree = "<group>"; };
+		148F11AA2B71AA4000CB34B1 /* AppearanceSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSettingsView.swift; sourceTree = "<group>"; };
 		1495C4412A73AC4100BED177 /* MessageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageConstants.swift; sourceTree = "<group>"; };
 		149CF31D2A693A0900DB79D0 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		149CF31F2A693DCD00DB79D0 /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				142A4E802A6A5B97006D5A32 /* SettingsView.swift */,
 				14C1DAD12A6FA6890045E6CE /* GeneralSettingsView.swift */,
 				14583AC92B36763600BF1D14 /* NotificationSettingsView.swift */,
+				148F11AA2B71AA4000CB34B1 /* AppearanceSettingsView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -359,7 +362,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					14DE79892A61031E0090E61D = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -485,6 +488,7 @@
 				149CF3222A693E3300DB79D0 /* HeaderView.swift in Sources */,
 				149CF31E2A693A0900DB79D0 /* CountdownView.swift in Sources */,
 				143D74B22A67A415006CD07E /* ImageButtonView.swift in Sources */,
+				148F11AB2B71AA4000CB34B1 /* AppearanceSettingsView.swift in Sources */,
 				149CF3272A6943E900DB79D0 /* ProgressView.swift in Sources */,
 				149CF3292A6944AB00DB79D0 /* ControlsView.swift in Sources */,
 				14DE798E2A61031E0090E61D /* StandoApp.swift in Sources */,
@@ -558,9 +562,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -619,9 +625,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -650,6 +658,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 6;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Stando/Preview Content\"";
 				DEVELOPMENT_TEAM = 5C93L24A22;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -683,6 +692,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 6;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Stando/Preview Content\"";
 				DEVELOPMENT_TEAM = 5C93L24A22;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -713,6 +723,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 5C93L24A22;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -732,6 +743,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 5C93L24A22;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -750,6 +762,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 5C93L24A22;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -767,6 +780,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 5C93L24A22;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;

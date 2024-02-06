@@ -45,7 +45,7 @@ struct ControlsView_Previews: PreviewProvider {
         }()
 
         ControlsView()
-            .environmentObject(MovementModel(posture: Posture.sitting, durationSeconds: 123))
+            .environmentObject(MovementModel(posture: Posture.sitting, durationElapsedSeconds: 123))
             .defaultAppStorage(userDefaults)
     }
 }

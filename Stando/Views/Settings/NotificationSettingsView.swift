@@ -10,7 +10,8 @@ import AVFoundation
 
 struct NotificationSettingsView: View {
     @AppStorage(SettingConstants.isSendingMovementNotifications) private var isSendingMovementNotifications = true
-    @AppStorage(SettingConstants.notificationSoundPath) private var notificationSoundPath = NotificationConstants.defaultFilePath
+    @AppStorage(SettingConstants.notificationSoundPath)
+    private var notificationSoundPath = NotificationConstants.defaultFilePath
 
     @State private var audioPlayer: AVAudioPlayer?
 
@@ -51,7 +52,10 @@ struct NotificationSettingsView: View {
                     .frame(width: 150, height: SettingViewConstants.frameHeight)
 
                     Button {
-                        guard let soundUrl = Bundle.main.url(forResource: notificationSoundPath, withExtension: nil) else {
+                        guard let soundUrl = Bundle.main.url(
+                            forResource: notificationSoundPath,
+                            withExtension: nil
+                        ) else {
                             return print("Audio file not found")
                         }
 

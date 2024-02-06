@@ -17,8 +17,8 @@ struct SessionView: View {
     }
 
     func calculateCaloriesBurned() -> Double {
-        let totalSitDurationHours = Double(movement.totalSitDurationSeconds) / 3600
-        let totalStandDurationHours = Double(movement.totalStandDurationSeconds) / 3600
+        let totalSitDurationHours = Double(movement.totalSitDurationElapsedSeconds) / 3600
+        let totalStandDurationHours = Double(movement.totalStandDurationElapsedSeconds) / 3600
 
         // Magic numbers from ChatGPT
         return totalSitDurationHours * 70 + totalStandDurationHours * 90
@@ -28,7 +28,7 @@ struct SessionView: View {
         HStack(spacing: 0) {
             SessionMetricView(
                 name: "Sitting",
-                value: "\(formatDurationHours(durationSeconds: movement.totalSitDurationSeconds)) h"
+                value: "\(formatDurationHours(durationSeconds: movement.totalSitDurationElapsedSeconds)) h"
             )
             .frame(minWidth: 70)
 
@@ -37,7 +37,7 @@ struct SessionView: View {
 
             SessionMetricView(
                 name: "Standing",
-                value: "\(formatDurationHours(durationSeconds: movement.totalStandDurationSeconds)) h"
+                value: "\(formatDurationHours(durationSeconds: movement.totalStandDurationElapsedSeconds)) h"
             )
             .frame(minWidth: 70)
 
@@ -66,9 +66,9 @@ struct SessionView_Previews: PreviewProvider {
         SessionView()
             .environmentObject(MovementModel(
                 posture: Posture.sitting,
-                durationSeconds: 123,
-                totalSitDurationSeconds: 123,
-                totalStandDurationSeconds: 123
+                durationElapsedSeconds: 123,
+                totalSitDurationElapsedSeconds: 123,
+                totalStandDurationElapsedSeconds: 123
             ))
             .defaultAppStorage(userDefaults)
     }

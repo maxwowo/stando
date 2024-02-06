@@ -33,7 +33,7 @@ struct PopoverView_Previews: PreviewProvider {
         }()
 
         PopoverView()
-            .environmentObject(MovementModel(posture: Posture.sitting, durationSeconds: 123))
+            .environmentObject(MovementModel(posture: Posture.sitting, durationElapsedSeconds: 123))
             .defaultAppStorage(userDefaults)
     }
 }

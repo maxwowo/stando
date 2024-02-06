@@ -17,17 +17,9 @@ struct CountdownView: View {
         movement.isSitting ? "figure.seated.side" : "figure.stand"
     }
 
-    private var formattedRemainingTime: String {
-        let durationSeconds = movement.isSitting ? sitDurationSeconds : standDurationSeconds
-
-        let remainingDurationSeconds = durationSeconds - movement.durationSeconds
-
-        return String(format: "%02d:%02d", remainingDurationSeconds / 60, remainingDurationSeconds % 60)
-    }
-
     var body: some View {
         VStack(spacing: 4) {
-            Text(formattedRemainingTime)
+            Text(movement.formattedRemainingTime)
                 .font(.largeTitle)
                 .monospacedDigit()
             Text("\(Image(postureIcon)) \(movement.isSitting ? "Sitting" : "Standing")")
@@ -46,7 +38,7 @@ struct CountdownView_Previews: PreviewProvider {
         }()
 
         CountdownView()
-            .environmentObject(MovementModel(posture: Posture.sitting, durationSeconds: 123))
+            .environmentObject(MovementModel(posture: Posture.sitting, durationElapsedSeconds: 123))
             .defaultAppStorage(userDefaults)
     }
 }

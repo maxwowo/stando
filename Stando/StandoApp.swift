@@ -10,6 +10,8 @@ import UserNotifications
 
 @main
 struct StandoApp: App {
+    @AppStorage(SettingConstants.isShowingDurationInMenuBar) private var isShowingDurationInMenuBar = false
+
     @StateObject private var movement = MovementModel()
 
     init() {
@@ -27,9 +29,15 @@ struct StandoApp: App {
             SettingsView()
         }
 
-        MenuBarExtra("Stando", image: movement.isSitting ? "figure.seated.side" : "figure.stand") {
+        MenuBarExtra {
             PopoverView()
                 .environmentObject(movement)
+        } label: {
+            Image(systemName: movement.isSitting ? "figure.seated.side" : "figure.stand")
+
+            if isShowingDurationInMenuBar {
+                Text(movement.formattedRemainingTime)
+            }
         }
         .menuBarExtraStyle(.window)
     }
