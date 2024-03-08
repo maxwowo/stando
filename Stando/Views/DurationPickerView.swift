@@ -74,6 +74,8 @@ struct DurationPickerView: View {
                     }
                 }
             }
+            .background(.background)
+            .cornerRadius(4)
 
             Stepper {
                 Text("\(minutes) min.")
@@ -93,6 +95,8 @@ struct DurationPickerView: View {
                     }
                 }
             }
+            .background(.background)
+            .cornerRadius(4)
 
             Stepper {
                 Text("\(seconds) sec.")
@@ -112,9 +116,9 @@ struct DurationPickerView: View {
                     }
                 }
             }
+            .background(.background)
+            .cornerRadius(4)
         }
-        .background(.background)
-        .cornerRadius(4)
     }
 }
 
