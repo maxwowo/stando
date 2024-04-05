@@ -13,13 +13,7 @@ struct StandoApp: App {
     @StateObject private var movement = MovementModel()
 
     init() {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
-            if success {
-                print("Succeeded requesting notification authorization")
-            } else if let error = error {
-                print(error.localizedDescription)
-            }
-        }
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) {_, _ in }
     }
 
     var body: some Scene {

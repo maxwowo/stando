@@ -10,6 +10,7 @@ import LaunchAtLogin
 
 struct GeneralSettingsView: View {
     @AppStorage(SettingConstants.isPausingAtLaunch) private var isPausingAtLaunch = false
+    @AppStorage(SettingConstants.isPausingOnSleep) private var isPausingOnSleep = true
     @AppStorage(SettingConstants.isSittingAtLaunch) private var isSittingAtLaunch = true
     @AppStorage(SettingConstants.isPausingAtEndOfMovement) private var isPausingAtEndOfMovement = false
     @AppStorage(SettingConstants.sitDurationSeconds) private var sitDurationSeconds = 900
@@ -21,6 +22,8 @@ struct GeneralSettingsView: View {
                 Text("Auto-start")
                     .frame(height: SettingViewConstants.frameHeight)
                 Text("Auto-play")
+                    .frame(height: SettingViewConstants.frameHeight)
+                Text("Auto-pause")
                     .frame(height: SettingViewConstants.frameHeight)
                 Text("Initial posture")
                     .frame(height: SettingViewConstants.frameHeight)
@@ -35,6 +38,8 @@ struct GeneralSettingsView: View {
                 LaunchAtLogin.Toggle()
                     .frame(height: SettingViewConstants.frameHeight)
                 Toggle("Pause at launch", isOn: $isPausingAtLaunch)
+                    .frame(height: SettingViewConstants.frameHeight)
+                Toggle("Pause on sleep", isOn: $isPausingOnSleep)
                     .frame(height: SettingViewConstants.frameHeight)
                 Toggle("Sit at launch", isOn: $isSittingAtLaunch)
                     .frame(height: SettingViewConstants.frameHeight)

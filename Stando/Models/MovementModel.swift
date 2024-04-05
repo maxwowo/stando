@@ -16,6 +16,7 @@ enum Posture {
 class MovementModel: ObservableObject {
     @AppStorage(SettingConstants.isSittingAtLaunch) private var isSittingAtLaunch = true
     @AppStorage(SettingConstants.isPausingAtLaunch) private var isPausingAtLaunch = false
+    @AppStorage(SettingConstants.isPausingOnSleep) private var isPausingOnSleep = true
     @AppStorage(SettingConstants.isPausingAtEndOfMovement) private var isPausingAtEndOfMovement = false
     @AppStorage(SettingConstants.isSendingMovementNotifications) private var isSendingMovementNotifications = true
     @AppStorage(SettingConstants.sitDurationSeconds) private var sitDurationSeconds = 900
@@ -56,6 +57,12 @@ class MovementModel: ObservableObject {
 
             if isSendingMovementNotifications {
                 sendMovementNotification()
+            }
+        }
+
+        NSWorkspace.shared.notificationCenter.addObserver(forName: NSWorkspace.willSleepNotification, object: nil, queue: nil) { _ in
+            if self.isPausingOnSleep {
+                self.pause()
             }
         }
     }
