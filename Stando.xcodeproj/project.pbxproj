@@ -39,6 +39,7 @@
 		149CF3272A6943E900DB79D0 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149CF3262A6943E900DB79D0 /* ProgressView.swift */; };
 		149CF3292A6944AB00DB79D0 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149CF3282A6944AB00DB79D0 /* ControlsView.swift */; };
 		14AE5CB22A6A386200647AFD /* SettingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AE5CB12A6A386200647AFD /* SettingConstants.swift */; };
+		14C1C37A2BBFAAEF0024629D /* NotificationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C1C3792BBFAAEF0024629D /* NotificationUtility.swift */; };
 		14C1DAD22A6FA6890045E6CE /* GeneralSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C1DAD12A6FA6890045E6CE /* GeneralSettingsView.swift */; };
 		14C1DAD62A6FC6540045E6CE /* DurationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C1DAD52A6FC6540045E6CE /* DurationPickerView.swift */; };
 		14DE267D2A6673A100754CC9 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DE267C2A6673A100754CC9 /* ProgressBarView.swift */; };
@@ -99,6 +100,7 @@
 		149CF3262A6943E900DB79D0 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		149CF3282A6944AB00DB79D0 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 		14AE5CB12A6A386200647AFD /* SettingConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingConstants.swift; sourceTree = "<group>"; };
+		14C1C3792BBFAAEF0024629D /* NotificationUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationUtility.swift; sourceTree = "<group>"; };
 		14C1DAD12A6FA6890045E6CE /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
 		14C1DAD52A6FC6540045E6CE /* DurationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationPickerView.swift; sourceTree = "<group>"; };
 		14C459E32A761A6A00B597C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -219,6 +221,14 @@
 			path = Session;
 			sourceTree = "<group>";
 		};
+		14C1C3782BBFAAE20024629D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				14C1C3792BBFAAEF0024629D /* NotificationUtility.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		14C1DAD02A6FA6710045E6CE /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +262,7 @@
 		14DE798C2A61031E0090E61D /* Stando */ = {
 			isa = PBXGroup;
 			children = (
+				14C1C3782BBFAAE20024629D /* Utilities */,
 				146C22BD2B38272900D2A3FB /* Sounds */,
 				14C459E32A761A6A00B597C3 /* Info.plist */,
 				143D74BA2A67CEF8006CD07E /* Models */,
@@ -489,6 +500,7 @@
 				149CF3292A6944AB00DB79D0 /* ControlsView.swift in Sources */,
 				14DE798E2A61031E0090E61D /* StandoApp.swift in Sources */,
 				141C0C0C2B396F4C0098D000 /* SettingViewConstants.swift in Sources */,
+				14C1C37A2BBFAAEF0024629D /* NotificationUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

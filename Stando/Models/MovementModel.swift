@@ -72,27 +72,7 @@ class MovementModel: ObservableObject {
     }
 
     func sendMovementNotification() {
-        let content = UNMutableNotificationContent()
-
-        content.title = "It's time to \(isSitting ? "sit down" : "stand up")!"
-
-        if isSitting {
-            if let message = MessageConstants.sitMessages.randomElement() {
-                content.subtitle = message
-            }
-        } else {
-            if let message = MessageConstants.standMessages.randomElement() {
-                content.subtitle = message
-            }
-        }
-
-        content.sound = notificationSoundPath == "Default" ? UNNotificationSound.default : UNNotificationSound(named: UNNotificationSoundName(rawValue: notificationSoundPath))
-
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-
-        UNUserNotificationCenter.current().add(request)
+        NotificationUtility.sendNotification(title: "It's time to \(isSitting ? "sit down" : "stand up")!", subtitle: isSitting ? MessageConstants.sitMessages.randomElement() : MessageConstants.standMessages.randomElement(), sound: notificationSoundPath == "Default" ? UNNotificationSound.default : UNNotificationSound(named: UNNotificationSoundName(rawValue: notificationSoundPath)))
     }
 
     func start() {
