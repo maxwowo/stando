@@ -10,7 +10,7 @@ import UserNotifications
 
 @main
 struct StandoApp: App {
-    @StateObject private var movement = MovementModel()
+    @StateObject private var movementModel = MovementModel()
 
     init() {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) {_, _ in }
@@ -21,9 +21,9 @@ struct StandoApp: App {
             SettingsView()
         }
 
-        MenuBarExtra("Stando", image: movement.isSitting ? "figure.seated.side" : "figure.stand") {
+        MenuBarExtra("Stando", image: movementModel.isSitting ? "figure.seated.side" : "figure.stand") {
             PopoverView()
-                .environmentObject(movement)
+                .environmentObject(movementModel)
         }
         .menuBarExtraStyle(.window)
     }
