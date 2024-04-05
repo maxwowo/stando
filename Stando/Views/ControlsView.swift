@@ -8,26 +8,26 @@
 import SwiftUI
 
 struct ControlsView: View {
-    @EnvironmentObject private var movement: MovementModel
+    @EnvironmentObject private var movementModel: MovementModel
 
     var body: some View {
         HStack(spacing: 12) {
-            HoverableImageButtonView(imageName: movement.isPaused ? "play" : "pause") {
-                movement.isPaused ? movement.resume() : movement.pause()
+            HoverableImageButtonView(imageName: movementModel.isPaused ? "play" : "pause") {
+                movementModel.isPaused ? movementModel.resume() : movementModel.pause()
             }
-            .help(movement.isPaused ? "Resume" : "Pause")
+            .help(movementModel.isPaused ? "Resume" : "Pause")
 
             ImageButtonView(
-                imageName: movement.isSitting ? "figure.stand" : "figure.seated.side",
+                imageName: movementModel.isSitting ? "figure.stand" : "figure.seated.side",
                 backgroundColor: Color.accentColor,
                 foregroundColor: Color("primaryButtonForeground")
             ) {
-                movement.next()
+                movementModel.next()
             }
-            .help(movement.isSitting ? "Stand up" : "Sit down")
+            .help(movementModel.isSitting ? "Stand up" : "Sit down")
 
             HoverableImageButtonView(imageName: "restart") {
-                movement.restart()
+                movementModel.restart()
             }
             .help("Restart")
         }

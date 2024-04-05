@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SessionView: View {
-    @EnvironmentObject private var movement: MovementModel
+    @EnvironmentObject private var movementModel: MovementModel
 
     func formatDurationHours(durationSeconds: Int) -> String {
         let hours = Double(durationSeconds) / 3600
@@ -17,8 +17,8 @@ struct SessionView: View {
     }
 
     func calculateCaloriesBurned() -> Double {
-        let totalSitDurationHours = Double(movement.totalSitDurationSeconds) / 3600
-        let totalStandDurationHours = Double(movement.totalStandDurationSeconds) / 3600
+        let totalSitDurationHours = Double(movementModel.totalSitDurationSeconds) / 3600
+        let totalStandDurationHours = Double(movementModel.totalStandDurationSeconds) / 3600
 
         // Magic numbers from ChatGPT
         return totalSitDurationHours * 70 + totalStandDurationHours * 90
@@ -28,7 +28,7 @@ struct SessionView: View {
         HStack(spacing: 0) {
             SessionMetricView(
                 name: "Sitting",
-                value: "\(formatDurationHours(durationSeconds: movement.totalSitDurationSeconds)) h"
+                value: "\(formatDurationHours(durationSeconds: movementModel.totalSitDurationSeconds)) h"
             )
             .frame(minWidth: 70)
 
@@ -37,7 +37,7 @@ struct SessionView: View {
 
             SessionMetricView(
                 name: "Standing",
-                value: "\(formatDurationHours(durationSeconds: movement.totalStandDurationSeconds)) h"
+                value: "\(formatDurationHours(durationSeconds: movementModel.totalStandDurationSeconds)) h"
             )
             .frame(minWidth: 70)
 

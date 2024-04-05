@@ -11,16 +11,16 @@ struct CountdownView: View {
     @AppStorage(SettingConstants.sitDurationSeconds) private var sitDurationSeconds = 900
     @AppStorage(SettingConstants.standDurationSeconds) private var standDurationSeconds = 2700
 
-    @EnvironmentObject private var movement: MovementModel
+    @EnvironmentObject private var movementModel: MovementModel
 
     private var postureIcon: String {
-        movement.isSitting ? "figure.seated.side" : "figure.stand"
+        movementModel.isSitting ? "figure.seated.side" : "figure.stand"
     }
 
     private var formattedRemainingTime: String {
-        let durationSeconds = movement.isSitting ? sitDurationSeconds : standDurationSeconds
+        let durationSeconds = movementModel.isSitting ? sitDurationSeconds : standDurationSeconds
 
-        let remainingDurationSeconds = durationSeconds - movement.durationSeconds
+        let remainingDurationSeconds = durationSeconds - movementModel.durationSeconds
 
         return String(format: "%02d:%02d", remainingDurationSeconds / 60, remainingDurationSeconds % 60)
     }
@@ -30,7 +30,7 @@ struct CountdownView: View {
             Text(formattedRemainingTime)
                 .font(.largeTitle)
                 .monospacedDigit()
-            Text("\(Image(postureIcon)) \(movement.isSitting ? "Sitting" : "Standing")")
+            Text("\(Image(postureIcon)) \(movementModel.isSitting ? "Sitting" : "Standing")")
         }
     }
 }

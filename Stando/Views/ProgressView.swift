@@ -11,15 +11,15 @@ struct ProgressView: View {
     @AppStorage(SettingConstants.sitDurationSeconds) private var sitDurationSeconds = 900
     @AppStorage(SettingConstants.standDurationSeconds) private var standDurationSeconds = 2700
 
-    @EnvironmentObject private var movement: MovementModel
+    @EnvironmentObject private var movementModel: MovementModel
 
     private var durationSeconds: Int {
-        movement.isSitting ? sitDurationSeconds : standDurationSeconds
+        movementModel.isSitting ? sitDurationSeconds : standDurationSeconds
     }
 
     var body: some View {
         ZStack {
-            ProgressBarView(progress: Double(movement.durationSeconds) / Double(durationSeconds))
+            ProgressBarView(progress: Double(movementModel.durationSeconds) / Double(durationSeconds))
                 .frame(width: DimensionConstants.screenWidth, height: DimensionConstants.screenWidth)
 
             CountdownView()

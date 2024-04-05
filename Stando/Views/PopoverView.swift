@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PopoverView: View {
-    @EnvironmentObject private var movement: MovementModel
+    @EnvironmentObject private var movementModel: MovementModel
 
     var body: some View {
         VStack(spacing: 24) {
