@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/realm/SwiftLint
-    rev: 0.52.4
+    rev: 0.58.2
     hooks:
       - id: swiftlint
         entry: swiftlint --fix --strict

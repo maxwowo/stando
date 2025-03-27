@@ -20,6 +20,7 @@ struct StandoApp: App {
         Settings {
             SettingsView()
         }
+        .defaultLaunchBehavior(.suppressed)
 
         MenuBarExtra("Stando", image: movementModel.isSitting ? "figure.seated.side" : "figure.stand") {
             PopoverView()
