@@ -60,6 +60,12 @@ class MovementModel: ObservableObject {
             }
         }
 
+        DistributedNotificationCenter.default().addObserver(forName: Notification.Name("com.apple.screenIsLocked"), object: nil, queue: nil) { _ in
+            if self.isPausingOnSleep {
+                self.pause()
+            }
+        }
+
         NSWorkspace.shared.notificationCenter.addObserver(forName: NSWorkspace.willSleepNotification, object: nil, queue: nil) { _ in
             if self.isPausingOnSleep {
                 self.pause()
